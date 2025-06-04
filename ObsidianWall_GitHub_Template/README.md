@@ -10,7 +10,7 @@ ObsidianWall is a Security Infrastructure-as-Code (SIaC) platform designed for c
 
 ## Brand Identity
 
-- **Logo**: `assets/logo.svg`
+- **Logo**: `assets/logo.png`
 - **Primary Color**: Ash Grey `#B2B2B2`
 - **Secondary**: Obsidian Black `#0A0A0A`
 - **Accent**: Carbon Steel `#4D4D4D`
