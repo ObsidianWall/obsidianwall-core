@@ -1,0 +1,27 @@
+
+{
+  // You can choose a base image that suits your needs.
+  // The 'universal' image is a good starting point as it includes many common tools.
+  "image": "mcr.microsoft.com/devcontainers/universal:latest",
+
+  // Add the Terraform Dev Container Feature
+  "features": {
+    // This line installs the Terraform CLI
+    // You can optionally specify a version, e.g., "ghcr.io/devcontainers/features/terraform:1.7.5"
+    "ghcr.io/devcontainers/features/terraform:1": {}
+  },
+
+  // Customize VS Code settings and extensions within the Codespace
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "hashicorp.terraform" // This installs the HashiCorp Terraform VS Code extension
+      ]
+    }
+  }
+
+  // (Optional) If you have existing settings, tasks, or ports, merge them here
+  // "settings": { ... },
+  // "postCreateCommand": "...",
+  // "forwardPorts": [ ... ]
+}
