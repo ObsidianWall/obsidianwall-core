@@ -48,7 +48,11 @@ name: 'Terraform'
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - 'ObsidianWall_GitHub_Template/modules/netbird-ec2/**'
   pull_request:
+    paths:
+      - 'ObsidianWall_GitHub_Template/modules/netbird-ec2/**'
 
 permissions:
   contents: read
@@ -63,6 +67,7 @@ jobs:
     defaults:
       run:
         shell: bash
+        working-directory: ObsidianWall_GitHub_Template/modules/netbird-ec2
 
     steps:
     # Checkout the repository to the GitHub Actions runner

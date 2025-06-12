@@ -1,0 +1,38 @@
+
+name: Terraform Example Plan
+
+on:
+  push:
+    paths:
+      - 'examples/**'
+  pull_request:
+    paths:
+      - 'examples/**'
+
+jobs:
+  terraform:
+    name: Plan Example Module
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: examples/deploy-netbird-ec2
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Format
+        run: terraform fmt -check
+
+      - name: Terraform Validate
+        run: terraform validate
+
+      - name: Terraform Plan
+        run: terraform plan -input=false

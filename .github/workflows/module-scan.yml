@@ -1,0 +1,22 @@
+
+on:
+  push:
+    paths:
+      - 'modules/**'
+jobs:
+  tfsec-scan:
+    strategy:
+      matrix:
+        module:
+          - modules/netbird-ec2
+          - modules/netbird-azure-vm
+          - modules/storage-azure
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run tfsec
+        uses: aquasecurity/tfsec-action@v1
+        with:
+          working_directory: ${{ matrix.module }}

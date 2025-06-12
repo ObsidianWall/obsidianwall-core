@@ -1,0 +1,35 @@
+
+name: Static Analysis (tfsec & checkov)
+
+on:
+  push:
+    paths:
+      - 'modules/**'
+  pull_request:
+    paths:
+      - 'modules/**'
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        module:
+          - modules/netbird-ec2
+          - modules/netbird-azure-vm
+          - modules/storage-azure
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run tfsec
+        uses: aquasecurity/tfsec-action@v1
+        with:
+          working_directory: ${{ matrix.module }}
+
+      - name: Run checkov
+        uses: bridgecrewio/checkov-action@v12
+        with:
+          directory: ${{ matrix.module }}
+
