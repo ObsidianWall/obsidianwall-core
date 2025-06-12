@@ -5,3 +5,9 @@ terraform.tfstate*
 *.tfvars.json
 *.backup
 .terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+terraform.tfvars
+*.auto.tfvars
+*.log
