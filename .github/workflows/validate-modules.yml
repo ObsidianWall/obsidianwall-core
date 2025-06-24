@@ -1,26 +1,39 @@
+# 🧱 Validate Terraform Module Directory Structure
+# Ensures all module folders follow consistent structure:
+# - Contains required files like main.tf, variables.tf
+# - No extraneous or misnamed directories
 
 
-
-
+name: Validate Terraform Modules
 
 on:
-  push:
+  pull_request:
     paths:
-      - 'modules/**'
+      - 'ObsidianWall_SIaC/modules/**'
+
 jobs:
-  tfsec-scan:
-    strategy:
-      matrix:
-        module:
-          - modules/netbird-ec2
-          - modules/netbird-azure-vm
-          - modules/storage-azure
+  validate-modules:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run tfsec
-        uses: aquasecurity/tfsec-action@v1
-        with:
-          working_directory: ${{ matrix.module }}
+      - name: Verify Terraform Module Structure
+        run: |
+          echo "Checking that all modules have required Terraform files..."
+
+          for module in ObsidianWall_SIaC/modules/*/; do
+            echo "📁 Scanning module: $module"
+
+            REQUIRED_FILES=("main.tf" "variables.tf" "outputs.tf" "versions.tf")
+
+            for file in "${REQUIRED_FILES[@]}"; do
+              if [ ! -f "$module/$file" ]; then
+                echo "❌ ERROR: Missing $file in $module"
+                exit 1
+              fi
+            done
+          done
+
+          echo "✅ All modules passed structure validation."

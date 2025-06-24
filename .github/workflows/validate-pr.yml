@@ -1,3 +1,7 @@
+# 🚦 Validate pull requests for formatting and merge hygiene
+# Runs only on PRs to ensure code quality and structural integrity
+
+
 
 name: Validate Pull Request Title and Description
 
