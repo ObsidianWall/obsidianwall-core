@@ -17,7 +17,9 @@
         "hashicorp.terraform"
       ]
     }
-  }
+  },
+
+  "postCreateCommand": "terraform --version && gh --version"
 
  
 }
