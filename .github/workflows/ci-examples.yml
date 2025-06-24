@@ -1,0 +1,53 @@
+
+# 🧪 CI: Run Terraform plan on example deployments
+# Simulates real-world usage of modules via examples/
+# Ensures examples remain deployable and error-free
+
+
+
+
+
+
+name: CI-Terraform Example Plan
+
+on:
+  pull_request:
+    paths:
+      - 'ObsidianWall_SIaC/examples/**'
+  push:
+    branches: [main]
+    paths:
+      - 'ObsidianWall_SIaC/examples/**'
+
+jobs:
+  example-plan:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        example:
+          - ObsidianWall_SIaC/examples/example-basic-vm
+          - ObsidianWall_SIaC/examples/example-ndr-deployment
+
+    defaults:
+      run:
+        shell: bash
+        working-directory: ${{ matrix.example }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+
+      - name: Terraform Init
+        run: terraform init -input=false
+
+      - name: Terraform Format
+        run: terraform fmt -check
+
+      - name: Terraform Validate
+        run: terraform validate
+
+      - name: Terraform Plan
+        run: terraform plan -input=false

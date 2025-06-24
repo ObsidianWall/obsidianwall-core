@@ -1,13 +1,21 @@
 
-name: Static Analysis (tfsec & checkov)
+# 🔍 Static analysis with tfsec + checkov on modules
+# Runs dual scan engines on all modules in matrix:
+# - tfsec (Terraform-specific vulnerabilities)
+# - checkov (broader IaC misconfigurations)
+
+
+
+
+name: Static Security Scan (tfsec & checkov)
 
 on:
   push:
     paths:
-      - 'modules/**'
+      - 'ObsidianWall_SIaC/modules/**'
   pull_request:
     paths:
-      - 'modules/**'
+      - 'ObsidianWall_SIaC/modules/**'
 
 jobs:
   security-scan:
@@ -15,9 +23,9 @@ jobs:
     strategy:
       matrix:
         module:
-          - modules/netbird-ec2
-          - modules/netbird-azure-vm
-          - modules/storage-azure
+          - ObsidianWall_SIaC/modules/netbird-ec2
+          - ObsidianWall_SIaC/modules/netbird-azure-vm
+          - ObsidianWall_SIaC/modules/ndr-azure
 
     steps:
       - name: Checkout
@@ -32,4 +40,3 @@ jobs:
         uses: bridgecrewio/checkov-action@v12
         with:
           directory: ${{ matrix.module }}
-

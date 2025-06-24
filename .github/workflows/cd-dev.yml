@@ -1,0 +1,33 @@
+# 🚀 CD: Auto-deploy infrastructure to dev environment
+# Runs on push to main or upon tag release (if configured)
+# Useful for testing ObsidianWall SIaC end-to-end in dev
+
+
+
+name: CD - Deploy Dev Infra
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'ObsidianWall_SIaC/environments/dev/**'
+
+jobs:
+  deploy-dev:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ObsidianWall_SIaC/environments/dev/
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve

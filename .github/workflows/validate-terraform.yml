@@ -1,0 +1,49 @@
+
+
+
+name: Validate Terraform
+
+on:
+  pull_request:
+    paths:
+      - 'ObsidianWall_SIaC/modules/**'
+  push:
+    branches: [main]
+    paths:
+      - 'ObsidianWall_SIaC/modules/**'
+
+jobs:
+  terraform-validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        module:
+          - ObsidianWall_SIaC/modules/netbird-ec2
+          - ObsidianWall_SIaC/modules/netbird-azure-vm
+          - ObsidianWall_SIaC/modules/ndr-azure
+
+    defaults:
+      run:
+        shell: bash
+        working-directory: ${{ matrix.module }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 1.6.6
+
+      - name: Terraform Init
+        run: terraform init -input=false
+
+      - name: Terraform Format
+        run: terraform fmt -check
+
+      - name: Terraform Validate
+        run: terraform validate
+
+      - name: Terraform Plan (Speculative)
+        run: terraform plan -input=false
