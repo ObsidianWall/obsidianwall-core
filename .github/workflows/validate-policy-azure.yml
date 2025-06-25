@@ -1,0 +1,55 @@
+
+# ✅ Azure Policy Validator for ObsidianWall
+# - Validates deployed Terraform templates using Azure Policy
+# - Uses az CLI to fetch policy compliance results
+# - Optional: Runs terrascan for IaC-level static analysis
+
+
+name: Validate Azure Policies
+
+on:
+  pull_request:
+    paths:
+      - 'ObsidianWall_SIaC/modules/**'
+  push:
+    branches: [main]
+    paths:
+      - 'ObsidianWall_SIaC/modules/**'
+
+env:
+  AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+  AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+  RESOURCE_GROUP: obsidianwall-validation-rg # Change to your actual validation RG
+  POLICY_SCOPE: /subscriptions/${{ secrets.AZURE_SUBSCRIPTION_ID }} # or narrower scope
+
+jobs:
+  azure-policy-validation:
+    name: Azure Policy Compliance Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Login to Azure using OIDC
+        uses: azure/login@v1
+        with:
+          creds: ${{ env.AZURE_CREDENTIALS }}
+
+      - name: List assigned policies in scope
+        run: |
+          echo "Fetching policy assignments for scope: $POLICY_SCOPE"
+          az policy assignment list --scope $POLICY_SCOPE --output table
+
+      - name: Show current policy compliance state
+        run: |
+          echo "Checking compliance..."
+          az policy state list --query "[?complianceState=='NonCompliant']" --output table
+
+      - name: (Optional) Run Terrascan on modules
+        uses: accurics/terrascan-action@v1.3.0
+        with:
+          iac_type: terraform
+          iac_version: v14
+          policy_type: azure
+          iac_dir: ObsidianWall_SIaC/modules
