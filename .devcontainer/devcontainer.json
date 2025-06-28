@@ -1,28 +1,38 @@
 
+
 {
   "name": "ObsidianWall Dev",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
 
-
   "features": {
-  
     "ghcr.io/devcontainers/features/terraform:1": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {}  
+    "ghcr.io/devcontainers/features/github-cli:1": {}
   },
 
-
- "customizations": {
+  "customizations": {
     "vscode": {
       "extensions": [
-        "hashicorp.terraform"
-      ]
+        "hashicorp.terraform",
+        "ms-vscode.live-share" // Optional: Good for collaboration
+      ],
+      "settings": {
+        // Optional: Pre-configure VS Code settings for Terraform
+        "terraform.languageServer.enabled": true,
+        "terraform.languageServer.args": [
+          "-log-level=debug" // Useful for debugging language server issues
+        ]
+      }
     }
   },
 
-  "postCreateCommand": "terraform --version && gh --version"
+  "postCreateCommand": "bash .devcontainer/setup-workspace.sh",
 
- 
+  // This will be the root directory that VS Code opens initially.
+  // It's still the repo root, but our script will manage what's *inside* it.
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}" 
 }
+  
+
 
 
 
