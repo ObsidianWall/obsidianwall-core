@@ -1,4 +1,7 @@
-# 🧱 Validate Terraform Module Directory Structure
+
+# File: .github/workflows/validate-modules.yml
+
+# 🧱 Description: GitHub Action to validate Terraform module directory structure
 # Ensures all module folders follow consistent structure:
 # - Contains required files like main.tf, variables.tf
 # - No extraneous or misnamed directories

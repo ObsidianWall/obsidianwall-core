@@ -7,7 +7,7 @@ set -e
 echo "--- Running Dev Container Setup Script ---"
 
 # Define the directory where your modules live
-MODULES_BASE_PATH="modules" # Adjust this if your modules are in a different top-level folder
+MODULES_BASE_PATH="ObsidianWall_SIaC/modules" # Adjust this if your modules are in a different top-level folder
 
 # --- Option 1: Prompt user for modules to checkout ---
 echo ""

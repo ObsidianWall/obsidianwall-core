@@ -1,3 +1,7 @@
+
+# File: .github/workflows/cd-dev.yml
+
+# Description: Continuous Deployment (CD) workflow for deploying the development infrastructure using Terraform.
 # 🚀 CD: Auto-deploy infrastructure to dev environment
 # Runs on push to main or upon tag release (if configured)
 # Useful for testing ObsidianWall SIaC end-to-end in dev

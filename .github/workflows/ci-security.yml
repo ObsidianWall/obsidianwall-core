@@ -1,4 +1,8 @@
 
+# File: .github/workflows/ci-security.yml
+
+# Project: ObsidianWall CI/CD Security Workflow
+# Description: This workflow runs static security scans on Terraform modules
 # 🔍 Static analysis with tfsec + checkov on modules
 # Runs dual scan engines on all modules in matrix:
 # - tfsec (Terraform-specific vulnerabilities)

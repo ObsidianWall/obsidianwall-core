@@ -1,4 +1,6 @@
+# File: .github/workflows/validate-policy-azure.yml
 
+# This GitHub Actions workflow validates Azure Policy compliance for the ObsidianWall project.
 # ✅ Azure Policy Validator for ObsidianWall
 # - Validates deployed Terraform templates using Azure Policy
 # - Uses az CLI to fetch policy compliance results

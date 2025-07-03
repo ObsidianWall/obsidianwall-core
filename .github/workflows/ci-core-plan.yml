@@ -1,3 +1,8 @@
+# File: .github/workflows/ci-core-plan.yml
+
+# This GitHub Actions workflow is designed to run Terraform plan commands
+# This workflow is triggered on pushes and pull requests to the dev environment directory.
+
 
 name: CI - Core Infra Plan
 

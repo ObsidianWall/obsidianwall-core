@@ -1,3 +1,4 @@
+# File: .github/workflows/validate-policy-aws.yml
 
 # This workflow will validate the IAM policies in the terraform (TF) templates with using the standard and custom checks in AWS IAM Access Analyzer
 # To use this workflow, you will need to complete the following set up steps before start using it:

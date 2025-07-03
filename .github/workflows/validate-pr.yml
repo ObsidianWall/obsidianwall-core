@@ -1,5 +1,10 @@
+# File: .github/workflows/validate-pr.yml
+
+# Description: This GitHub Actions workflow validates pull request titles and descriptions to ensure they follow a meaningful format.
 # 🚦 Validate pull requests for formatting and merge hygiene
 # Runs only on PRs to ensure code quality and structural integrity
+
+
 
 
 

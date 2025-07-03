@@ -1,3 +1,7 @@
+# File: .github/workflows/validate-terraform.yml
+
+# Description: Validate Terraform modules in the ObsidianWall_SIaC repository
+# This GitHub Actions workflow validates Terraform modules in the ObsidianWall_SIaC repository.
 # ✅ Format, init, and plan Terraform modules on push/PR
 # Ensures Terraform is correctly formatted and runs a speculative plan
 # Requires TF_API_TOKEN for Terraform Cloud (if using remote backend)

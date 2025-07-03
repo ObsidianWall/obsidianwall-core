@@ -1,4 +1,7 @@
 
+# File: .github/workflows/ci-examples.yml
+
+# Description: This GitHub Actions workflow runs Terraform plan on example deployments
 # 🧪 CI: Run Terraform plan on example deployments
 # Simulates real-world usage of modules via examples/
 # Ensures examples remain deployable and error-free
