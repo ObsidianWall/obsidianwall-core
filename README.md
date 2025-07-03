@@ -29,4 +29,24 @@ Unlike generic IaC libraries, ObsidianWall focuses on:
 
 Each module follows:
 
-<pre><code>Each module follows: ObsidianWall_SIaC/ └── modules/ ├── aws-ec2/ ← 🔸 Example AWS EC2 module │ ├── main.tf ← Core Terraform configuration │ ├── network.tf ← Optional: networking setup │ ├── variables.tf ← Input variables │ ├── outputs.tf ← Output values │ ├── security.tf ← Security policies (e.g. SGs, IAM) │ ├── versions.tf ← Terraform version constraints │ ├── README.md ← Usage docs for this module │ ├── .gitignore ← Ignore unnecessary local files │ └── .github/ │ └── workflows/ │ └── ci-security.yml ← Module-level security CI pipeline ├── azure-vm/ │ └── ... └── ndr-aws-ec2/ └── ... </code></pre>
+
+Each module follows:
+
+ObsidianWall_SIaC/
+└── modules/
+    ├── aws-ec2/                        ← 🔸 Example AWS EC2 module
+    │   ├── main.tf                     ← Core Terraform configuration
+    │   ├── network.tf                  ← Optional: networking setup
+    │   ├── variables.tf                ← Input variables
+    │   ├── outputs.tf                  ← Output values
+    │   ├── security.tf                 ← Security policies (e.g. SGs, IAM)
+    │   ├── versions.tf                 ← Terraform version constraints
+    │   ├── README.md                   ← Usage docs for this module
+    │   ├── .gitignore                  ← Ignore unnecessary local files
+    │   └── .github/
+    │       └── workflows/
+    │           └── ci-security.yml     ← Module-level security CI pipeline
+    ├── azure-vm/
+    │   └── ...
+    └── ndr-aws-ec2/
+        └── ...
