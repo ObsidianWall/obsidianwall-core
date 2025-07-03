@@ -23,6 +23,7 @@ on:
 
 jobs:
   security-scan:
+    name: Module Security Scanning
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -34,7 +35,7 @@ jobs:
           - ObsidianWall_SIaC/modules/ndr-aws-ec2
 
     steps:
-      - name: Checkout
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Run tfsec
@@ -42,7 +43,7 @@ jobs:
         with:
           working_directory: ${{ matrix.module }}
 
-      - name: Run checkov
+      - name: Run Checkov
         uses: bridgecrewio/checkov-action@v12
         with:
           directory: ${{ matrix.module }}

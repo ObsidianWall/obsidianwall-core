@@ -21,6 +21,7 @@ on:
 
 jobs:
   terraform-validate:
+    name: Terraform Format, Validate, and Plan
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -30,13 +31,14 @@ jobs:
           - ObsidianWall_SIaC/modules/azure-storage
           - ObsidianWall_SIaC/modules/ndr-azure-vm
           - ObsidianWall_SIaC/modules/ndr-aws-ec2
+
     defaults:
       run:
         shell: bash
         working-directory: ${{ matrix.module }}
 
     steps:
-      - name: Checkout repo
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Setup Terraform
@@ -47,7 +49,7 @@ jobs:
       - name: Terraform Init
         run: terraform init -input=false
 
-      - name: Terraform Format
+      - name: Terraform Format Check
         run: terraform fmt -check
 
       - name: Terraform Validate

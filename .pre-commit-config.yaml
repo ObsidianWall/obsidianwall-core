@@ -1,0 +1,30 @@
+repos:
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.79.0
+    hooks:
+      - id: terraform_fmt
+      - id: terraform_validate
+      - id: terraform_tflint
+        args: ["--minimum-severity=warning"]
+      - id: terraform_docs
+        args: ["--output-file", "README.md", "--output-mode", "inject"]
+
+  - repo: https://github.com/aquasecurity/tfsec
+    rev: v1.28.1
+    hooks:
+      - id: tfsec
+        args: ["--soft-fail=false"]
+
+  - repo: https://github.com/bridgecrewio/checkov
+    rev: 3.2.44
+    hooks:
+      - id: checkov
+        args: ["--framework", "terraform"]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: check-added-large-files

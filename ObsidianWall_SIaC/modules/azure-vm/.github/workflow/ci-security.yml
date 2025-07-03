@@ -1,0 +1,33 @@
+# File: modules/aws_ec2/.github/workflows/ci-security.yml
+# Purpose: Local module build-time security validation (tfsec + Checkov)
+
+name: Security Scan (aws_ec2)
+
+on:
+  push:
+    paths:
+      - '**/*.tf'
+      - '**/*.tfvars'
+  pull_request:
+    paths:
+      - '**/*.tf'
+      - '**/*.tfvars'
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    name: Static IaC Security (tfsec & Checkov)
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run tfsec
+        uses: aquasecurity/tfsec-action@v1
+        with:
+          working_directory: .
+
+      - name: Run Checkov
+        uses: bridgecrewio/checkov-action@v12
+        with:
+          directory: .
