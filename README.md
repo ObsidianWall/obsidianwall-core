@@ -31,21 +31,21 @@ Each module follows:
 
 
 ├── ObsidianWall_SIaC/
-│   └── modules/                    ← 🔸 All modules live under /modules
-│       ├── aws-ec2/                ← Example AWS EC2 module
+│   └── modules/                       ← 🔸 All modules live under /modules
+│       ├── aws-ec2/                   ← Example AWS EC2 module
 |       │   ├── main.tf                ← Core Terraform configuration
 |       |   ├── network.tf             ← Network configuration
 │       │   ├── variables.tf           ← Input variables
 │       │   ├── outputs.tf             ← Outputs for other modules
-│       │   ├── security.tf              ← Security policies
-│       │   ├── versions.tf               ← Terraform version constraints
-│       │   ├── README.md             ← Module documentation
-│       │   ├── .gitignore            ← Ignore local files
-│       │   └── .github/workflows/    ← Local module-level GitHub Actions
+│       │   ├── security.tf            ← Security policies
+│       │   ├── versions.tf            ← Terraform version constraints
+│       │   ├── README.md              ← Module documentation
+│       │   ├── .gitignore             ← Ignore local files
+│       │   └── .github/workflows/     ← Local module-level GitHub Actions
 │       │       └── ci-security.yml
 │       └── ...
-├── README.md                         ← Main documentation
+├── README.md                          ← Main documentation
 ├── provider.tf                   
-├── .gitignore                        ← Ignore local files
-|── versions.tf                       ← Terraform version constraints
+├── .gitignore                         ← Ignore local files
+|── versions.tf                        ← Terraform version constraints
 
