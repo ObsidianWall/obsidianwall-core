@@ -30,8 +30,7 @@ Unlike generic IaC libraries, ObsidianWall focuses on:
 Each module follows:
 
 
-Each module follows:
-
+```
 ObsidianWall_SIaC/
 └── modules/
     ├── aws-ec2/                        ← 🔸 Example AWS EC2 module
@@ -50,3 +49,4 @@ ObsidianWall_SIaC/
     │   └── ...
     └── ndr-aws-ec2/
         └── ...
+```
