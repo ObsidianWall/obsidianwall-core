@@ -61,10 +61,12 @@ ObsidianWall_SIaC/
 brew install pre-commit     # or pipx install pre-commit
 pre-commit install          # installs Git hooks
 pre-commit run --all-files  # run all hooks on existing files (e.g., initial check)
+```
 
 
 
-##  2. Clone & Deploy a Module
+### 2. Clone & Deploy a Module
+
 ```bash
 Copy
 Edit
@@ -72,3 +74,4 @@ git clone https://github.com/ObsidianWall/ObsidianWall-Core.git
 cd ObsidianWall_SIaC/modules/aws-ec2
 terraform init
 terraform apply
+```
