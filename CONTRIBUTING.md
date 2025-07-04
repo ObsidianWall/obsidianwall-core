@@ -1,4 +1,4 @@
-# file: CONTRIBUTING.md
+# file: obsidianwall-core/CONTRIBUTING.md
 
 # Contributing to ObsidianWall
 
