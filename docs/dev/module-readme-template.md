@@ -19,6 +19,7 @@ module "<module-name>" {
   ...
 }
 
+```
 ---
 
 ## 📥 Input Variables
@@ -59,6 +60,7 @@ Default configurations are secure, but be sure to:
 (Optional: Describe if the module behaves differently in AWS, Azure, etc.)
 
 ---
+
 ## ⚠️ Requirements
 
 Terraform >= 1.6.6
