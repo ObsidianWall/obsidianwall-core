@@ -75,3 +75,65 @@ cd ObsidianWall_SIaC/modules/aws-ec2
 terraform init
 terraform apply
 ```
+All modules are security-scanned at commit via pre-commit and at PR via GitHub Actions.
+
+### 3. Validate Security Policies
+
+🛡️ Security & CI/CD
+✅ Static Scans: tfsec, checkov, tflint
+
+🧪 CI Pipelines:
+
+ci-security.yml: dual static scan on module matrix
+
+validate-terraform.yml: format, validate, and speculative plan
+
+🔐 Secrets Management: Best practices enforced via AWS Secrets Manager / Azure Key Vault
+
+### 4. Example: Deploy Netbird VPN with AWS EC2
+🔍 Example: Deploy Netbird VPN with AWS EC2
+```bash
+cd ObsidianWall_SIaC/modules/netbird-ec2
+terraform init
+terraform apply
+# This deploys a hardened Netbird VPN server on AWS EC2 with security policies applied.
+```
+---
+**💬 Community**
+| Docs                   | Discussions             | Issues                   | Terraform Registry (TBA) |
+| ---------------------- | ----------------------- | ------------------------ | ------------------------ |
+| [📘 Docs (WIP)](docs/) | [💬 Chat](discussions/) | [🐛 Report Bug](issues/) | [🌍 Registry](#)         |
+
+---
+
+**🤝 Contributing**
+We welcome secure-by-default contributions! Please review:
+
+CONTRIBUTING.md
+
+Pre-commit setup & style guide
+
+Pull Request Template
+
+
+## 🛠️ Development Setup
+To run the linter and scanners locally:
+
+```bash
+pre-commit run --all-files
+```
+---
+
+**📜 License**
+MIT License © 2025 ObsidianWall Contributors
+
+---
+**🎨 Brand Identity**
+Logo: assets/logo.png
+
+Primary Color: Ash Grey #B2B2B2
+
+Secondary: Obsidian Black #0A0A0A
+
+Accent: Carbon Steel #4D4D4D
+---
