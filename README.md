@@ -109,7 +109,7 @@ terraform apply
 **🤝 Contributing**
 We welcome secure-by-default contributions! Please review:
 
-CONTRIBUTING.md
+CONTRIBUTING.md     
 
 Pre-commit setup & style guide
 
@@ -136,4 +136,5 @@ Primary Color: Ash Grey #B2B2B2
 Secondary: Obsidian Black #0A0A0A
 
 Accent: Carbon Steel #4D4D4D
+
 ---

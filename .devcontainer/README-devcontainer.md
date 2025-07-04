@@ -1,3 +1,6 @@
+
+# file: developer-docs/README-devcontainer.md
+
 # Dev Container Setup for ObsidianWall
 
 This project includes a pre-configured **Dev Container** to streamline development in Visual Studio Code or GitHub Codespaces.
