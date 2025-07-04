@@ -72,7 +72,8 @@ pre-commit run --all-files
 pre-commit run <hook_id>
 ```
 ---
-**✍️ Contributing a New Module**
+## ✍️ Contributing a New Module
+
 To contribute a new module, please follow these steps:
 
 1. Fork the repo and create a new branch from `main`
@@ -93,12 +94,83 @@ To contribute a new module, please follow these steps:
 
 5. Run `pre-commit` locally and fix any issues.
 
+
 6. Submit a PR with:
     - A clear title and description
     - Link to any related issues (if applicable)
 ---
 
-**✅ CI/CD Expectations**
+## 🔍 Module Quality Checklist
+
+Before submitting your module, make sure it passes all required validation and security checks:
+
+ terraform fmt
+
+ terraform validate
+
+ tfsec
+
+ checkov
+
+ tflint
+
+ Module-specific CI workflow exists at .github/workflows/ci-security.yml
+
+ Module is included in repo-wide:
+
+.github/workflows/ci-security.yml
+
+.github/workflows/validate-terraform.yml
+
+---
+
+## 🛠️ Improvements & Fixes
+
+For bug fixes or improvements to existing modules:
+
+Create a new branch from main
+
+Use clear, descriptive commit messages and PR titles
+
+Adhere to the existing module structure and naming conventions
+
+If relevant, add test/demo configs under:
+ObsidianWall_SIaC/environments/examples/
+
+---
+
+## 📄 Documentation Contributions
+To contribute or update documentation:
+
+Edit relevant .md files under docs/
+
+Make sure to link new content from the README.md or other appropriate docs
+
+For new modules:
+
+  Provide a complete README.md
+
+  Use the standard template: docs/dev/module-readme-template.md
+
+---
+
+## ✅ Final PR Checklist
+
+Before opening a PR:
+
+  pre-commit passes on all modified files
+
+  terraform plan completes with no errors
+
+  README.md is present for new modules
+
+  Security workflows (local + global) are correctly configured
+
+--- 
+
+
+## ✅ CI/CD Expectations
+
 When you open a PR:
 
 terraform validate, plan, fmt will run automatically
@@ -107,15 +179,16 @@ Static security tools tfsec and checkov will run across changed modules
 
 Your PR will be blocked if:
 
-Terraform formatting fails
+  Terraform formatting fails
 
-Security violations are critical
+  Security violations are critical
 
-Module naming/structure deviates from standards
+  Module naming/structure deviates from standards
 
 ---
 
-**🧠 Guidelines & Philosophy**
+## 🧠 Guidelines & Philosophy
+
 Security First: Every module should enforce secure defaults.
 
 Composable by Design: Favor modular, reusable code.
@@ -128,15 +201,20 @@ Cloud Agnostic Where Possible: But follow native best practices (e.g., AWS S3 en
 
 ---
 
-**🤝 Code of Conduct**
+## 🤝 Code of Conduct
+
 We expect all contributors to follow our Code of Conduct to ensure a respectful and inclusive environment.
 
 ---
-**🙋 Need Help?**
+## 🙋 Need Help?
+
 If you're unsure how to start, open a Discussion or tag your PR with help-wanted.
 
 We’re happy to guide new contributors. 🧱🛡️
 
 ---
-Happy building,
+**Happy building,**
+
 The ObsidianWall Team
+
+---
