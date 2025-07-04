@@ -40,6 +40,7 @@ module "<module-name>" {
 ---
 
 ## 🔐 Security Notes
+
 This module enforces encryption at rest (e.g., kms_key_id support).
 
 Network access is restricted using Security Groups / NSGs.
@@ -53,5 +54,36 @@ Default configurations are secure, but be sure to:
   Avoid hardcoding sensitive data.
 
 ---
-☁️ Cloud-Specific Behavior
+## ☁️ Cloud-Specific Behavior
+
 (Optional: Describe if the module behaves differently in AWS, Azure, etc.)
+
+---
+## ⚠️ Requirements
+
+Terraform >= 1.6.6
+
+Provider(s): AWS / Azure / etc.
+
+External dependencies (e.g., Netbird VPN config if used)
+---
+
+## 📂 Examples
+
+See ../../environments/examples/<module-name> for example usage.
+
+---
+
+## 🧪 Testing
+
+(Optional: add how to test the module locally or via CI)
+
+---
+
+## 📜 License
+
+MIT – see LICENSE 
+
+---
+
+
