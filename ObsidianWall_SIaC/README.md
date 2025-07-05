@@ -90,6 +90,8 @@ Check out:
 
  - Discussions or Issues tab
 
+
+---
 _Build securely,_
 
 _🧱 The ObsidianWall Team_
