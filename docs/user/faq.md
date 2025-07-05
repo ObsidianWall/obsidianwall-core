@@ -59,11 +59,11 @@ ObsidianWall modules are written in Terraform HCL, so they are natively supporte
 
 However, ObsidianWall can be used alongside other IaC tools like:
 
-   Pulumi (by calling Terraform modules)
+  - Pulumi (by calling Terraform modules)
 
-   CloudFormation (in separate stacks)
+  - CloudFormation (in separate stacks)
 
-   Crossplane (via Composition/ProviderConfig patterns)
+  - Crossplane (via Composition/ProviderConfig patterns)
 
 ObsidianWall’s vision includes future adapter modules and templates to help bridge Terraform and other tools.
 
@@ -74,11 +74,11 @@ ObsidianWall modules are designed to be composable, meaning you can integrate th
 
 You can:
 
-   Import ObsidianWall modules into your existing main.tf or stack structure
+  - Import ObsidianWall modules into your existing main.tf or stack structure
 
-   Use terraform_remote_state to link outputs between your current code and ObsidianWall modules
+  - Use terraform_remote_state to link outputs between your current code and ObsidianWall modules
 
-   Gradually migrate or replace existing modules with more secure ObsidianWall counterparts
+  - Gradually migrate or replace existing modules with more secure ObsidianWall counterparts
 
 🔐 Bonus: By integrating even a single ObsidianWall module, your infrastructure benefits from built-in security validation and Zero Trust defaults.
 
@@ -88,9 +88,9 @@ Yes.
 
 You can integrate ObsidianWall modules into broader Terraform stacks alongside community or internal modules. For example:
 
-   Use ObsidianWall for secure networking or compute
+  - Use ObsidianWall for secure networking or compute
 
-   Use custom/internal modules for business-specific services
+  - Use custom/internal modules for business-specific services
 
 Just ensure compatibility with Terraform versioning and variable interfaces.
 
@@ -103,11 +103,11 @@ In the future, obsi-cli and obsidianwall-core may support mixed pipelines, polic
 ### Are the modules secure?
 Yes. Every module is scanned with:
 
-   tfsec (Terraform vulnerability detection)
+  - tfsec (Terraform vulnerability detection)
 
-   checkov (IaC misconfiguration analysis)
+  - checkov (IaC misconfiguration analysis)
 
-   tflint (linting and best practices)
+  - tflint (linting and best practices)
 
 We also validate modules with GitHub Actions CI workflows.
 
@@ -128,13 +128,13 @@ Absolutely! Start by reading CONTRIBUTING.md in the root repo.
 Yes — see docs/dev/naming-conventions.md.
 
 ### What tools should I install to contribute?
-  Terraform CLI
+  - Terraform CLI
 
-  Pre-commit
+  - Pre-commit
 
-  Python (for some scanning tools)
+  - Python (for some scanning tools)
 
-  Git
+  - Git
 Run pre-commit install after cloning to ensure local checks match CI.  
 
 
@@ -157,13 +157,13 @@ obsi deploy aws-ec2 --env dev
 ### My deployment fails at terraform plan. What now?
 Check:
 
-  Input variables — are required values provided?
+  - Input variables — are required values provided?
 
-  Terraform version — ObsidianWall supports 1.6.6+
+  - Terraform version — ObsidianWall supports 1.6.6+
 
-  Cloud credentials — authenticated to AWS/Azure?
+  - Cloud credentials — authenticated to AWS/Azure?
 
-  Use terraform validate and terraform fmt to check formatting and syntax.
+  - Use terraform validate and terraform fmt to check formatting and syntax.
 
 ### My module fails CI checks — how do I fix it?
 Run the same checks locally with pre-commit:
