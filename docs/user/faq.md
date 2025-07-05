@@ -41,6 +41,46 @@ These provide sample configurations that use one or more ObsidianWall modules.
 ### Do I need to modify modules?
 No. Modules are preconfigured with secure defaults. You can override variables to customize deployments as needed.
 
+
+### How do I customize a module?
+
+You can customize modules by modifying the `variables.tf` file in the module directory. You can also pass variables directly when running `terraform apply`:
+
+```bash
+terraform apply -var="region=us-west-2" -var="instance_type=t3.micro"
+```
+You can also create a terraform.tfvars file with your preferred values for reuse.
+
+
+### Can I use ObsidianWall with other IaC tools?
+Yes — but with some caveats.
+
+ObsidianWall modules are written in Terraform HCL, so they are natively supported in Terraform workflows.
+
+However, ObsidianWall can be used alongside other IaC tools like:
+
+  Pulumi (by calling Terraform modules)
+
+  CloudFormation (in separate stacks)
+
+  Crossplane (via Composition/ProviderConfig patterns)
+
+ObsidianWall’s vision includes future adapter modules and templates to help bridge Terraform and other tools.
+
+
+### Can I use ObsidianWall to deploy non-ObsidianWall IaC infrastructure?
+Yes.
+
+You can integrate ObsidianWall modules into broader Terraform stacks alongside community or internal modules. For example:
+
+  Use ObsidianWall for secure networking or compute
+
+  Use custom/internal modules for business-specific services
+
+Just ensure compatibility with Terraform versioning and variable interfaces.
+
+In the future, obsi-cli and obsidianwall-core may support mixed pipelines, policy validation, and security guardrails across third-party IaC modules as well.
+
 ---
 
 ## 🔐 Security & Compliance
@@ -81,6 +121,19 @@ Yes — see docs/dev/naming-conventions.md.
 
   Git
 Run pre-commit install after cloning to ensure local checks match CI.  
+
+
+### Can I use obsi-cli to deploy modules?
+_(🧪 Experimental Feature)_
+
+Yes. If you’re using the obsi-cli tool (ObsidianWall’s future CLI), you can deploy and manage modules with simplified commands.
+
+Example:
+```bash
+obsi deploy aws-ec2 --env dev
+```
+⚠️ Note: obsi-cli is a planned part of the ObsidianWall ecosystem but may not be available in all releases.
+
 
 ----
 
