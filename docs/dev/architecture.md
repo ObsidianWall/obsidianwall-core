@@ -117,4 +117,4 @@ Design ➜ IaC Module ➜ Pre-Commit Hooks ➜ GitHub Actions ➜ Provisioning �
 
 ----
 
-Last updated: [07/04/2025]
+_Last updated: 07/04/2025_
