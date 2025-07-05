@@ -88,3 +88,5 @@ Until we finalize a full security incident response process, contributors and us
 
 Stay secure,  
 **The ObsidianWall Team**
+
+_Last updated: 07/04/2025_

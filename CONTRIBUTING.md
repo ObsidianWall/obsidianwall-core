@@ -218,3 +218,5 @@ We’re happy to guide new contributors. 🧱🛡️
 The ObsidianWall Team
 
 ---
+
+_Last updated: 07/04/2025_

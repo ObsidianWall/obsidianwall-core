@@ -112,7 +112,7 @@ ObsidianWall is built to evolve with:
 
 ---
 
-*Last updated: [07/04/2025]*
+_Last updated: 07/04/2025_
 
 
 
