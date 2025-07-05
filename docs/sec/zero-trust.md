@@ -1,6 +1,6 @@
 # files: docs/sec/zero-trust.md
 
-```
+
 # Zero Trust Security in ObsidianWall
 
 > This document describes how ObsidianWall embodies and enables Zero Trust principles across cloud deployments.
