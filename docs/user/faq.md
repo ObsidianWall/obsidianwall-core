@@ -67,6 +67,21 @@ However, ObsidianWall can be used alongside other IaC tools like:
 
 ObsidianWall’s vision includes future adapter modules and templates to help bridge Terraform and other tools.
 
+### Can I use ObsidianWall with existing Terraform code?
+Yes.
+
+ObsidianWall modules are designed to be composable, meaning you can integrate them into your existing Terraform projects seamlessly.
+
+You can:
+
+   Import ObsidianWall modules into your existing main.tf or stack structure
+
+   Use terraform_remote_state to link outputs between your current code and ObsidianWall modules
+
+   Gradually migrate or replace existing modules with more secure ObsidianWall counterparts
+
+🔐 Bonus: By integrating even a single ObsidianWall module, your infrastructure benefits from built-in security validation and Zero Trust defaults.
+
 
 ### Can I use ObsidianWall to deploy non-ObsidianWall IaC infrastructure?
 Yes.
