@@ -4,9 +4,9 @@
 
 ---
 
-title: Quickstart Guide
+**title:** Quickstart Guide
 
-description: A step-by-step guide to get started with ObsidianWall.
+**description:** A step-by-step guide to get started with ObsidianWall.
 
 # 🚀 Quickstart Guide
 
