@@ -35,7 +35,7 @@ Inside:
 ObsidianWall_SIaC/environments/examples/
 
 ````
-These provide sample configurations that use one or more ObsidianWall modules.
+_These provide sample configurations that use one or more ObsidianWall modules._
 
 
 ### Do I need to modify modules?
@@ -49,7 +49,7 @@ You can customize modules by modifying the `variables.tf` file in the module dir
 ```bash
 terraform apply -var="region=us-west-2" -var="instance_type=t3.micro"
 ```
-You can also create a terraform.tfvars file with your preferred values for reuse.
+_You can also create a terraform.tfvars file with your preferred values for reuse._
 
 
 ### Can I use ObsidianWall with other IaC tools?
@@ -65,7 +65,7 @@ However, ObsidianWall can be used alongside other IaC tools like:
 
   - Crossplane (via Composition/ProviderConfig patterns)
 
-ObsidianWall’s vision includes future adapter modules and templates to help bridge Terraform and other tools.
+_ObsidianWall’s vision includes future adapter modules and templates to help bridge Terraform and other tools._
 
 ### Can I use ObsidianWall with existing Terraform code?
 Yes.
@@ -80,7 +80,7 @@ You can:
 
   - Gradually migrate or replace existing modules with more secure ObsidianWall counterparts
 
-🔐 Bonus: By integrating even a single ObsidianWall module, your infrastructure benefits from built-in security validation and Zero Trust defaults.
+_🔐 Bonus: By integrating even a single ObsidianWall module, your infrastructure benefits from built-in security validation and Zero Trust defaults._
 
 
 ### Can I use ObsidianWall to deploy non-ObsidianWall IaC infrastructure?
@@ -92,9 +92,9 @@ You can integrate ObsidianWall modules into broader Terraform stacks alongside c
 
   - Use custom/internal modules for business-specific services
 
-Just ensure compatibility with Terraform versioning and variable interfaces.
+_Just ensure compatibility with Terraform versioning and variable interfaces._
 
-In the future, obsi-cli and obsidianwall-core may support mixed pipelines, policy validation, and security guardrails across third-party IaC modules as well.
+_In the future, obsi-cli and obsidianwall-core may support mixed pipelines, policy validation, and security guardrails across third-party IaC modules as well._
 
 ---
 
@@ -109,7 +109,7 @@ Yes. Every module is scanned with:
 
   - tflint (linting and best practices)
 
-We also validate modules with GitHub Actions CI workflows.
+_We also validate modules with GitHub Actions CI workflows._
 
 ### What is “Security-as-Code” in ObsidianWall?
 Security-as-Code means we encode IAM, encryption, network access, logging, and compliance controls directly into our Terraform modules and policies — not as afterthoughts.
@@ -135,7 +135,7 @@ Yes — see docs/dev/naming-conventions.md.
   - Python (for some scanning tools)
 
   - Git
-Run pre-commit install after cloning to ensure local checks match CI.  
+_Run pre-commit install after cloning to ensure local checks match CI._  
 
 
 ### Can I use obsi-cli to deploy modules?
@@ -147,7 +147,7 @@ Example:
 ```bash
 obsi deploy aws-ec2 --env dev
 ```
-⚠️ Note: obsi-cli is a planned part of the ObsidianWall ecosystem but may not be available in all releases.
+_⚠️ Note: obsi-cli is a planned part of the ObsidianWall ecosystem but may not be available in all releases._
 
 
 ----
