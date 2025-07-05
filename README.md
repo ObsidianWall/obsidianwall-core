@@ -68,8 +68,6 @@ pre-commit run --all-files  # run all hooks on existing files (e.g., initial che
 ### 2. Clone & Deploy a Module
 
 ```bash
-Copy
-Edit
 git clone https://github.com/ObsidianWall/ObsidianWall-Core.git
 cd ObsidianWall_SIaC/modules/aws-ec2
 terraform init
@@ -90,8 +88,9 @@ validate-terraform.yml: format, validate, and speculative plan
 
 🔐 Secrets Management: Best practices enforced via AWS Secrets Manager / Azure Key Vault
 
-### 4. Example: Deploy Netbird VPN with AWS EC2
-🔍 Example: Deploy Netbird VPN with AWS EC2
+
+### 4. 🔍 Example: Deploy Netbird VPN with AWS EC2
+
 ```bash
 cd ObsidianWall_SIaC/modules/netbird-ec2
 terraform init
@@ -99,14 +98,16 @@ terraform apply
 # This deploys a hardened Netbird VPN server on AWS EC2 with security policies applied.
 ```
 ---
-**💬 Community**
+## 💬 Community
+
 | Docs                   | Discussions             | Issues                   | Terraform Registry (TBA) |
 | ---------------------- | ----------------------- | ------------------------ | ------------------------ |
 | [📘 Docs (WIP)](docs/) | [💬 Chat](discussions/) | [🐛 Report Bug](issues/) | [🌍 Registry](#)         |
 
 ---
 
-**🤝 Contributing**
+## 🤝 Contributing
+
 We welcome secure-by-default contributions! Please review:
 
 CONTRIBUTING.md     
@@ -117,6 +118,7 @@ Pull Request Template
 
 
 ## 🛠️ Development Setup
+
 To run the linter and scanners locally:
 
 ```bash
@@ -124,11 +126,13 @@ pre-commit run --all-files
 ```
 ---
 
-**📜 License**
+## 📜 License
+
 MIT License © 2025 ObsidianWall Contributors
 
 ---
-**🎨 Brand Identity**
+## 🎨 Brand Identity
+
 Logo: assets/logo.png
 
 Primary Color: Ash Grey #B2B2B2
