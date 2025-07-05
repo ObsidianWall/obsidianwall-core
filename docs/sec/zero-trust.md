@@ -83,5 +83,5 @@ Validate posture both pre-deployment and at runtime
 
 By combining Infrastructure-as-Code with Security-as-Code and optional runtime observability, ObsidianWall serves as a Zero Trust foundation for modern cloud-native systems.
 
-
+---
 _Last updated: 07/05/2025_

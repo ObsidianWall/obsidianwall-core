@@ -108,6 +108,6 @@ tags = {
 
 Thanks for following the standard. 🛡️
 
----
+----
 
 _Last updated: 07/04/2025_

@@ -110,7 +110,7 @@ ObsidianWall is built to evolve with:
 - `docs/dev/naming-conventions.md`
 - `docs/user/deploying-modules.md`
 
----
+----
 
 _Last updated: 07/04/2025_
 
