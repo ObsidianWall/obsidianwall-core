@@ -61,6 +61,7 @@ Passing via -var flag, or
 Using environment variables
 
 **Example:**
+```hcl
 # terraform.tfvars
 region = "us-east-1"
 instance_type = "t3.micro"
