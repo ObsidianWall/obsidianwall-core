@@ -114,4 +114,5 @@ Visit the FAQ or Quickstart guides for more help.
 ---
 
 Happy deploying,
+
 The ObsidianWall Team 🛡️
