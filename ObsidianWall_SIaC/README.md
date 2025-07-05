@@ -39,7 +39,7 @@ Each module includes:
 - Built-time validation with `tfsec`, `checkov`, `tflint`
 - Per-module GitHub Actions CI
 
-🔐 All modules enforce **Zero Trust** principles.
+_🔐 All modules enforce **Zero Trust** principles._
 
 ---
 
@@ -91,6 +91,7 @@ Check out:
  - Discussions or Issues tab
 
 Build securely,
+
 🧱 The ObsidianWall Team
 
 ---
