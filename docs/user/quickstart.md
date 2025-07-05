@@ -79,6 +79,7 @@ This will run:
  - tfsec
 
  - checkov
+---
 
 ## 🧪 Step 6: Try an Example Stack
 ```
