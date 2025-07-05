@@ -54,5 +54,3 @@ ObsidianWall is not a certified product, but its use can help accelerate your co
 For deep technical implementation, policy mapping, and extensibility — see [docs/sec/compliance.md](docs/sec/compliance.md).
 
 ---
-
-_Last updated: 07/05/2025_

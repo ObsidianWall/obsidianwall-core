@@ -132,5 +132,4 @@ For consumer-level summary, refer to: [`COMPLIANCE.md`](obsidianwall-core/COMPLI
 
 ---
 
-_Last updated: 07/05/2025_
 
