@@ -68,4 +68,50 @@ instance_type = "t3.micro"
 key_name = "my-ec2-key"
 ami = "ami-0c55b159cbfafe1f0" # Example AMI ID for us-east-1
 ```
+---
+## 🧠 Security Considerations
 
+All modules are scanned using tfsec, checkov, and tflint before release
+
+Follow Zero Trust principles: avoid public access, lock down IAM, encrypt everything
+
+For runtime observability, consider also deploying:
+
+  ndr-aws-ec2
+
+  ndr-azure-vm
+
+----
+
+## 🔄 Reprovisioning
+**If you make changes:**
+```
+terraform plan
+terraform apply
+```
+
+**To destroy:**
+```bash
+terraform destroy
+```
+
+---
+## 🧪 Using Examples
+
+**If you're unsure where to start, you can use pre-built examples:**
+```bash
+cd ObsidianWall_SIaC/environments/examples/aws-ec2-minimal/
+terraform init
+terraform apply
+```
+---
+## 📚 Need Help?
+
+Each module includes a README.md with usage instructions and required variables.
+
+Visit the FAQ or Quickstart guides for more help.
+
+---
+
+Happy deploying,
+The ObsidianWall Team 🛡️
