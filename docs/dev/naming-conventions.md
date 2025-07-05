@@ -76,10 +76,12 @@ tags = {
 -Add any additional tags relevant to the organization or project.   
 - Use consistent tag keys across all resources 
 
----
+```
 
-**💡 Naming Do's and Don'ts**
-✅ Do:
+
+## 💡 Naming Do's and Don'ts
+
+**✅ Do:**
 
   Use lowercase and hyphens
 
@@ -87,7 +89,7 @@ tags = {
 
   Be descriptive but concise
 
-❌ Don’t:
+**❌ Don’t:**
 
   Use underscores or camelCase in module or folder names
 
@@ -96,7 +98,7 @@ tags = {
   Use generic names like server.tf or setup.tf
   ----
 
-Maintaining these conventions ensures your modules are:
+**Maintaining these conventions ensures your modules are:**
 
   Predictable
 
@@ -105,6 +107,7 @@ Maintaining these conventions ensures your modules are:
   Discoverable via search and automation
 
 Thanks for following the standard. 🛡️
+
 ---
 
 _Last updated: 07/04/2025_
