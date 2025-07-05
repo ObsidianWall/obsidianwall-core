@@ -59,11 +59,11 @@ ObsidianWall modules are written in Terraform HCL, so they are natively supporte
 
 However, ObsidianWall can be used alongside other IaC tools like:
 
-  Pulumi (by calling Terraform modules)
+   Pulumi (by calling Terraform modules)
 
-  CloudFormation (in separate stacks)
+   CloudFormation (in separate stacks)
 
-  Crossplane (via Composition/ProviderConfig patterns)
+   Crossplane (via Composition/ProviderConfig patterns)
 
 ObsidianWall’s vision includes future adapter modules and templates to help bridge Terraform and other tools.
 
@@ -73,9 +73,9 @@ Yes.
 
 You can integrate ObsidianWall modules into broader Terraform stacks alongside community or internal modules. For example:
 
-  Use ObsidianWall for secure networking or compute
+   Use ObsidianWall for secure networking or compute
 
-  Use custom/internal modules for business-specific services
+   Use custom/internal modules for business-specific services
 
 Just ensure compatibility with Terraform versioning and variable interfaces.
 
@@ -88,11 +88,11 @@ In the future, obsi-cli and obsidianwall-core may support mixed pipelines, polic
 ### Are the modules secure?
 Yes. Every module is scanned with:
 
-  tfsec (Terraform vulnerability detection)
+   tfsec (Terraform vulnerability detection)
 
-  checkov (IaC misconfiguration analysis)
+   checkov (IaC misconfiguration analysis)
 
-  tflint (linting and best practices)
+   tflint (linting and best practices)
 
 We also validate modules with GitHub Actions CI workflows.
 
