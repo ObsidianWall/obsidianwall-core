@@ -1,12 +1,14 @@
 
-# File: obsidianwall-core/ObsidianWall_SIaC/modules/aws_ec2/.github/workflows/ci-security.yml
+# File: obsidianwall-core/ObsidianWall_SIaC/modules/netbird-vpn-server/.github/workflows/ci-security.yml
+
+
 
 # Purpose: Local module build-time security validation (tfsec + Checkov)
 # This GitHub Actions workflow runs static security scans on Terraform code
 # using TFLint, tfsec, and Checkov. It is triggered on pushes and pull requests
 
 
-name: Static IaC Security Scan (aws_ec2)
+name: Static IaC Security Scan (netbird-vpn-server)
 
 on:
   push:

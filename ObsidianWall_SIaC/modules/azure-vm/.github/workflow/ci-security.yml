@@ -1,8 +1,11 @@
-# File: obsidianwall-core/ObsidianWall_SIaC/modules/aws_ec2/.github/workflows/ci-security.yml
+# File: obsidianwall-core/ObsidianWall_SIaC/modules/azure-vm/.github/workflows/ci-security.yml
 
 # Purpose: Local module build-time security validation (tfsec + Checkov)
 
-name: Security Scan (aws_ec2)
+# Note: This workflow is triggered on changes to Terraform files (.tf, .tfvars) in the repository.
+
+
+name: Static IaC Security Scan (azure-vm)
 
 on:
   push:
@@ -16,12 +19,31 @@ on:
 
 jobs:
   security-scan:
+    name: Security + Linting
     runs-on: ubuntu-latest
-    name: Static IaC Security (tfsec & Checkov)
+    defaults:
+      run:
+        working-directory: ./  # adjust per module if needed
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.6.6
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Validate
+        run: terraform validate
+
+      - name: Run TFLint
+        uses: terraform-linters/setup-tflint@v4
+        with:
+          tflint_version: latest
 
       - name: Run tfsec
         uses: aquasecurity/tfsec-action@v1
