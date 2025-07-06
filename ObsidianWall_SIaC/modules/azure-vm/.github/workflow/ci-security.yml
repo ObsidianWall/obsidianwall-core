@@ -46,7 +46,7 @@ jobs:
           tflint_version: latest
 
       - name: Run tfsec
-        uses: aquasecurity/tfsec-action@v1
+        uses: aquasecurity/tfsec-action@v1.0.3
         with:
           working_directory: ObsidianWall_SIaC/modules/azure-vm  # adjust per module if needed
 
