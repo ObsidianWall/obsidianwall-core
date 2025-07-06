@@ -3,7 +3,7 @@
 
 # Description: GitHub Actions workflow for static security scanning of Terraform code
 
-# Purpose: Local module build-time security validation (tfsec + Checkov)
+# Purpose: Local module build-time security validation (tfsec + Checkov + TFLint)
 
 
 name: Static IaC Security Scan (ndr-azure-vm)
@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./  # adjust per module if needed
+        working-directory:  ObsidianWall_SIaC/modules/ndr-azure-vm  # adjust per module if needed
 
     steps:
       - name: Checkout code
@@ -49,9 +49,9 @@ jobs:
       - name: Run tfsec
         uses: aquasecurity/tfsec-action@v1
         with:
-          working_directory: .
+          working_directory: ObsidianWall_SIaC/modules/ndr-azure-vm
 
       - name: Run Checkov
         uses: bridgecrewio/checkov-action@v12
         with:
-          directory: .
+          directory: ObsidianWall_SIaC/modules/ndr-azure-vm

@@ -1,9 +1,7 @@
 
 # File: obsidianwall-core/ObsidianWall_SIaC/modules/netbird-vpn-server/.github/workflows/ci-security.yml
 
-
-
-# Purpose: Local module build-time security validation (tfsec + Checkov)
+# Purpose: Local module build-time security validation (tfsec + Checkov + TFLint)
 # This GitHub Actions workflow runs static security scans on Terraform code
 # using TFLint, tfsec, and Checkov. It is triggered on pushes and pull requests
 
@@ -26,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./  # adjust per module if needed
+        working-directory:  ObsidianWall_SIaC/modules/netbird-vpn-server  # adjust per module if needed
 
     steps:
       - name: Checkout code
@@ -51,9 +49,9 @@ jobs:
       - name: Run tfsec
         uses: aquasecurity/tfsec-action@v1
         with:
-          working_directory: .
+          working_directory: ObsidianWall_SIaC/modules/netbird-vpn-server
 
       - name: Run Checkov
         uses: bridgecrewio/checkov-action@v12
         with:
-          directory: .
+          directory: ObsidianWall_SIaC/modules/netbird-vpn-server

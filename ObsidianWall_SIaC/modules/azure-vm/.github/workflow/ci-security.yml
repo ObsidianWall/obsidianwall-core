@@ -1,6 +1,6 @@
 # File: obsidianwall-core/ObsidianWall_SIaC/modules/azure-vm/.github/workflows/ci-security.yml
 
-# Purpose: Local module build-time security validation (tfsec + Checkov)
+# Purpose: Local module build-time security validation (tfsec + Checkov + TFLint)
 
 # Note: This workflow is triggered on changes to Terraform files (.tf, .tfvars) in the repository.
 
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./  # adjust per module if needed
+        working-directory:  ObsidianWall_SIaC/modules/azure-vm  # adjust per module if needed
 
     steps:
       - name: Checkout code
@@ -48,9 +48,9 @@ jobs:
       - name: Run tfsec
         uses: aquasecurity/tfsec-action@v1
         with:
-          working_directory: .
+          working_directory: ObsidianWall_SIaC/modules/azure-vm  # adjust per module if needed
 
       - name: Run Checkov
         uses: bridgecrewio/checkov-action@v12
         with:
-          directory: .
+          directory: ObsidianWall_SIaC/modules/azure-vm  # adjust per module if needed
