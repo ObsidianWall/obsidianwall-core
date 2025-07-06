@@ -1,7 +1,7 @@
 
-# filepath: modules/aws-ec2/versions.tf
+#filepath: modules/aws-s3/versions.tf
 
-# This file specifies the required Terraform version and provider versions for the AWS EC2 module.
+# This file specifies the required Terraform version and provider versions for the AWS S3 module.
 
 
 terraform {

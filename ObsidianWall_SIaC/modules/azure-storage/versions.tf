@@ -1,8 +1,7 @@
 
-#filepath: modules/azure-vm/versions.tf
+# filepath: modules/azure-storage/versions.tf
 
-# This file is used to define the required Terraform version and provider versions for the Azure VM module.
-
+# This file defines the required Terraform version and provider versions for the Azure Storage module.
 
 
 terraform {
