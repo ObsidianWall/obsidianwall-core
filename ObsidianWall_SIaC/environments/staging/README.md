@@ -4,11 +4,12 @@
 
 ## 📁 `environments/staging/README.md`
 
-```markdown
+n
 # Staging Environment
 
 This environment mimics production as closely as possible for testing infrastructure and observability before promoting to prod.
 
+---
 ## How to Deploy
 
 ```bash
