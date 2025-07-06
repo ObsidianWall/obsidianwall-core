@@ -1,11 +1,7 @@
 
 ## file: 📁`obsidianwall-core/ObsidianWall_SIaC/modules/aws-ec2/README.md`
 
-
 ---
-
-## 📁 `obsidianwall-core/ObsidianWall_SIaC/modules/aws-ec2/README.md`
-
 
 # `aws-ec2` Module for AWS EC2 Instances
 
