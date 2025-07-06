@@ -1,5 +1,5 @@
 
-## file:📁 `obsidianwall-core/docs/dev/architecture.md`
+#### file:📁 `obsidianwall-core/docs/dev/architecture.md`
 
 
 

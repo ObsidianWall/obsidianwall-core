@@ -1,4 +1,4 @@
-## file: 📁 `obsidianwall-core/docs/sec/zero-trust.md`
+#### file: 📁 `obsidianwall-core/docs/sec/zero-trust.md`
 
 
 

@@ -1,5 +1,5 @@
 
-## file: 📁 `obsidianwall-core/docs/user/quickstart.md`
+#### file: 📁 `obsidianwall-core/docs/user/quickstart.md`
 
 
 

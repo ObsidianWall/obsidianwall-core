@@ -1,4 +1,4 @@
-## file: 📁 `obsidianwall-core/docs/user/faq.md`
+#### file: 📁 `obsidianwall-core/docs/user/faq.md`
 
 
 

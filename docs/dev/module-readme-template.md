@@ -1,5 +1,5 @@
 
-## file: 📁 `obsidianwall-core/docs/dev/module-readme-template.md`
+#### file: 📁 `obsidianwall-core/docs/dev/module-readme-template.md`
 
 
 

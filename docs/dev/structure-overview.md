@@ -1,5 +1,5 @@
 
-## file: 📁 `obsidianwall-core/docs/dev/structure-overview.md` 
+#### file: 📁 `obsidianwall-core/docs/dev/structure-overview.md` 
 
 
 # ObsidianWall Structure Overview
