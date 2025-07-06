@@ -2,7 +2,7 @@
 
 ## 📁 `examples/deploy-aws-ec2/README.md`
 
-```markdown
+---
 # Example: Deploy Netbird-enabled EC2 Instance
 
 This example provisions an EC2 instance that automatically joins a Netbird VPN mesh overlay network using `cloud-init`.
