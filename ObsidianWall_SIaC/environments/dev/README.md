@@ -7,12 +7,15 @@
 
 This environment sets up infrastructure for development and testing purposes. It is not production-grade and may use looser security defaults or lower-cost instance types.
 
+---
 ## Modules Used
 
 - `aws-ec2`
 - `azure-vm`
 - `netbird-vpn` (optional)
 - `azure-storage` (optional)
+
+---
 
 ## How to Deploy
 
