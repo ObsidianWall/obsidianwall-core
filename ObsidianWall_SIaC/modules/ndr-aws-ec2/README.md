@@ -4,7 +4,6 @@
 
 ---
 
-
 # NDR (AWS) Module – Zeek + Suricata + Netbird
 
 Deploys an NDR sensor EC2 instance on AWS with Zeek, Suricata, and optional Netbird agent.
@@ -31,7 +30,7 @@ module "ndr_aws" {
 ## ✅ Inputs / Outputs
 See variables.tf / outputs.tf.
 
-### 🔐 Security Notes
+## 🔐 Security Notes
  - Secured Security Group
 
  - Cloud-init updates and logs

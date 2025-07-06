@@ -1,4 +1,4 @@
-# File: .github/workflows/validate-terraform.yml
+# File: obsidianwall-core/.github/workflows/validate-terraform.yml
 
 # Description: Validate Terraform modules in the ObsidianWall_SIaC repository
 # This GitHub Actions workflow validates Terraform modules in the ObsidianWall_SIaC repository.

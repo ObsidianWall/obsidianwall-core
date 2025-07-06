@@ -1,5 +1,7 @@
 
-# File: .github/workflows/cd-dev.yml
+# File:obsidianwall-core/.github/workflows/cd-dev.yml
+
+
 
 # Description: Continuous Deployment (CD) workflow for deploying the development infrastructure using Terraform.
 # 🚀 CD: Auto-deploy infrastructure to dev environment

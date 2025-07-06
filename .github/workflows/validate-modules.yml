@@ -1,5 +1,5 @@
 
-# File: .github/workflows/validate-modules.yml
+# File: obsidianwall-core/.github/workflows/validate-modules.yml
 
 # 🧱 Description: GitHub Action to validate Terraform module directory structure
 # Ensures all module folders follow consistent structure:

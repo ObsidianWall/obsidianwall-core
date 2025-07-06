@@ -1,4 +1,4 @@
-# File: .github/workflows/validate-pr.yml
+# File: obsidianwall-core/.github/workflows/validate-pr.yml
 
 # Description: This GitHub Actions workflow validates pull request titles and descriptions to ensure they follow a meaningful format.
 # 🚦 Validate pull requests for formatting and merge hygiene

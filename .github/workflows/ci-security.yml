@@ -1,5 +1,6 @@
 
-# File: .github/workflows/ci-security.yml
+# File: obsidianwall-core/.github/workflows/ci-security.yml
+
 
 # Project: ObsidianWall CI/CD Security Workflow
 # Description: This workflow runs static security scans on Terraform modules

@@ -3,7 +3,6 @@
 
 ---
 
-
 # `azure-vm` Module for Azure Virtual Machines
 
 Securely provisions an Azure VM using best practices.
@@ -29,7 +28,7 @@ module "azure_vm" {
 ## ✅ Inputs / Outputs
 Refer to variables.tf / outputs.tf.
 
-### 🔐 Security Notes
+## 🔐 Security Notes
  - Uses SSH key, disables password login
 
  - Encrypted data disks

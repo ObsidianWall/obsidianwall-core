@@ -34,7 +34,7 @@ module "ndr_azure" {
 ## ✅ Inputs / Outputs
 See variables.tf / outputs.tf.
 
-### 🔐 Security Notes
+## 🔐 Security Notes
  - Uses NSG locks limiting inbound/outbound
 
  - Logs forwarded securely to Sentinel

@@ -29,7 +29,7 @@ module "aws_ec2" {
 Refer to variables.tf / outputs.tf.
 
 
-### 🔐 Security Notes
+## 🔐 Security Notes
  - Enforces encryption at rest
 
  - Hardened OS config via cloud-init

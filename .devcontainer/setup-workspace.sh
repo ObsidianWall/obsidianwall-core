@@ -1,3 +1,4 @@
+# file: obsidianwall-core/.devcontainer/setup-workspace.sh
 
 #!/bin/bash
 
