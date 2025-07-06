@@ -46,6 +46,15 @@ jobs:
         uses: terraform-linters/setup-tflint@v4
         with:
           tflint_version: latest
+      
+      - name: Register TFLint Problem Matcher
+        run: echo "::add-matcher::.github/matchers/tflint.json"
+
+      - name: Run TFLint (with annotations)
+        run: |
+          cd ${{ matrix.module }}
+          tflint --init
+          tflint --format=compact    
 
       - name: Run TFLint
         run: |
