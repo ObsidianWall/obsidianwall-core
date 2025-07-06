@@ -143,4 +143,3 @@ Accent: Carbon Steel #4D4D4D
 
 ---
 
-_Last updated: 07/04/2025_
