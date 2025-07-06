@@ -6,6 +6,16 @@
 # <Module Name>
 
 > Short description of what this module does and what it provisions. # check out "naminf-conventions.md" for more details.
+---
+## 📋 Overview
+| Attribute     | Value                 |
+|---------------|------------------------|
+| Module Name   | <module-name>          |
+| Cloud         | AWS / Azure / Multi    |
+| VPN Support   | Optional (Netbird)     |
+| Runtime Agent | Optional (Suricata, Zeek) |
+| CI Scanned    | Yes                    |
+
 
 ---
 
@@ -81,6 +91,12 @@ See ../../environments/examples/<module-name> for example usage.
 ## 🧪 Testing
 
 (Optional: add how to test the module locally or via CI)
+
+---
+
+## 🧠 Future Enhancements
+> 🧠 _Future_: This module may optionally integrate with runtime AI observability agents for drift detection and posture scoring.
+
 
 ---
 

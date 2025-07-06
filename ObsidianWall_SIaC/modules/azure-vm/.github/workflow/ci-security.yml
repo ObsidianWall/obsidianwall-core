@@ -1,4 +1,5 @@
-# File: modules/aws_ec2/.github/workflows/ci-security.yml
+# File: obsidianwall-core/ObsidianWall_SIaC/modules/aws_ec2/.github/workflows/ci-security.yml
+
 # Purpose: Local module build-time security validation (tfsec + Checkov)
 
 name: Security Scan (aws_ec2)

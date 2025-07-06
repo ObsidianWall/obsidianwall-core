@@ -1,3 +1,4 @@
+# file: obsidianwall-core/.gitignore
 
 # .gitignore
 *.tfvars
