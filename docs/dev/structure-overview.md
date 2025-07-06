@@ -1,5 +1,5 @@
 
-# file: docs/dev/structure-overview.md 
+# file: 📁 `docs/dev/structure-overview.md` 
 
 # ObsidianWall Structure Overview
 
@@ -112,7 +112,7 @@ ObsidianWall is built to evolve with:
 
 ----
 
-_Last updated: 07/04/2025_
+
 
 
 

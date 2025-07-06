@@ -1,5 +1,5 @@
 
-# file: developer-docs/README-devcontainer.md
+# file: 📁 `developer-docs/README-devcontainer.md`
 
 # Dev Container Setup for ObsidianWall
 

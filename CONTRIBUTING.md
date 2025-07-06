@@ -1,4 +1,4 @@
-# file: obsidianwall-core/CONTRIBUTING.md
+# file: 📁 ` obsidianwall-core/CONTRIBUTING.md`
 
 # Contributing to ObsidianWall
 
@@ -218,5 +218,3 @@ We’re happy to guide new contributors. 🧱🛡️
 The ObsidianWall Team
 
 ---
-
-_Last updated: 07/04/2025_

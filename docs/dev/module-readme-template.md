@@ -1,5 +1,5 @@
 
-# files: docs/sec/module-readme-template.md
+# files: 📁 `docs/sec/module-readme-template.md`
 
 # <Module Name>
 
@@ -88,4 +88,3 @@ MIT – see LICENSE
 
 ----
 
-_Last updated: 07/04/2025_

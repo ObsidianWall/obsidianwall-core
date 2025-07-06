@@ -1,4 +1,4 @@
-# files: docs/dev/workflows.md
+# file: 📁 `docs/dev/workflows.md`
 
 # CI/CD & Automation Workflows Overview
 
@@ -91,5 +91,4 @@ These logs correlate runtime alerts to the specific IaC that provisioned them.
 
 ----
 
-_Last updated: 07/04/2025_
 

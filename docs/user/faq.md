@@ -1,6 +1,5 @@
 
 
-
 # ❓ Frequently Asked Questions (FAQ)
 
 Welcome to the ObsidianWall FAQ. Here you’ll find answers to the most common questions around using, deploying, and extending the ObsidianWall platform.

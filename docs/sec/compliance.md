@@ -1,5 +1,5 @@
 
-# files: docs/sec/compliance.md
+# file: 📁 `docs/sec/compliance.md`
 
 # 🔍 Compliance Strategy & Enforcement  
 _Deep Dive: docs/sec/compliance.md_

@@ -1,5 +1,6 @@
 
-# file: developer-docs/naming-conventions.md
+# file: 📁 `developer-docs/naming-conventions.md`
+
 # Naming Conventions
 
 # ObsidianWall Module Naming Conventions
@@ -110,4 +111,3 @@ Thanks for following the standard. 🛡️
 
 ----
 
-_Last updated: 07/04/2025_

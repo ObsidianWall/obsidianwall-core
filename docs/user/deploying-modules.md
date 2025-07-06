@@ -1,5 +1,5 @@
 
-# files: docs/user/deploying-modules.md
+# file: 📁 `docs/user/deploying-modules.md`
 
 # 📦 Deploying Modules
 
@@ -116,3 +116,5 @@ Visit the FAQ or Quickstart guides for more help.
 Happy deploying,
 
 The ObsidianWall Team 🛡️
+
+---

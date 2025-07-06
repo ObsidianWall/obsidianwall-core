@@ -1,4 +1,4 @@
-# files:docs/sec/threat-model.md
+# file: 📁 `docs/sec/threat-model.md`
 
 # Threat Model for ObsidianWall
 
@@ -70,4 +70,3 @@ This threat model will be reviewed:
 
 ---
 
-_Last updated: 07/04/2025_

@@ -1,5 +1,5 @@
 
-# files: obsidianwall-core/SECURITY.md
+# file: 📁 `obsidianwall-core/SECURITY.md`
 
 # Security Policy
 
@@ -88,5 +88,3 @@ Until we finalize a full security incident response process, contributors and us
 
 Stay secure,  
 **The ObsidianWall Team**
-
-_Last updated: 07/04/2025_

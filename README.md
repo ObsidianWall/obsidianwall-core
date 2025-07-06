@@ -1,3 +1,5 @@
+# file: 📁 `obsidianwall-core/README.md`
+
 # ObsidianWall
 
 **Composable Infrastructure. Secure by Default.**  

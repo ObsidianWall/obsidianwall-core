@@ -1,4 +1,4 @@
-# files: 📁 ` obsidianwall-core/ObsidianWall_SIaC/README.md`
+# file: 📁 ` obsidianwall-core/ObsidianWall_SIaC/README.md`
 
 
 # ObsidianWall SIaC Modules

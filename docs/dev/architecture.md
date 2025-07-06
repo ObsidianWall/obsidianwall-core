@@ -1,5 +1,5 @@
 
-# file: developer-docs/architecture.md 
+# file:📁 ` developer-docs/architecture.md `
 
 # ObsidianWall Architecture (Work in Progress)
 
@@ -117,4 +117,3 @@ Design ➜ IaC Module ➜ Pre-Commit Hooks ➜ GitHub Actions ➜ Provisioning �
 
 ----
 
-_Last updated: 07/04/2025_
