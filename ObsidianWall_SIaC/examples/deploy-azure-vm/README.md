@@ -28,6 +28,8 @@ terraform apply
 
  - Default network security rules
 
+---
+
 ## Notes
  - This is a minimal demo — not suitable for production as-is.
 
