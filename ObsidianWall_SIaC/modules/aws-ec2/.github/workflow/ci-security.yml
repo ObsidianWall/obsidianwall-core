@@ -1,12 +1,10 @@
 
 # File: obsidianwall-core/ObsidianWall_SIaC/modules/aws_ec2/.github/workflows/ci-security.yml
 
-# Purpose: Local module build-time security validation (tfsec + Checkov)
+# Purpose: Local module build-time security validation (tfsec + Checkov + TFLint)
 
 
-
-
-
+# Note: This workflow is triggered on changes to Terraform files (.tf, .tfvars) in the module directory.
 
 name: Static IaC Security Scan (aws-ec2)
 

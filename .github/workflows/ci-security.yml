@@ -11,7 +11,7 @@
 
 
 
-name: Static Security Scan (tfsec & checkov)
+name: Static Security Scan (tfsec, checkov, tflint)
 
 on:
   push:
@@ -33,34 +33,25 @@ jobs:
           - ObsidianWall_SIaC/modules/azure-storage
           - ObsidianWall_SIaC/modules/ndr-azure-vm
           - ObsidianWall_SIaC/modules/ndr-aws-ec2
-           - ObsidianWall_SIaC/modules/netbird-vpn-server
+          - ObsidianWall_SIaC/modules/netbird-vpn-server
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Set Working Directory
-        run: cd ${{ matrix.module }}
-
       - name: Setup TFLint
         uses: terraform-linters/setup-tflint@v4
         with:
           tflint_version: latest
-      
-      - name: Register TFLint Problem Matcher
+
+      - name: Register TFLint Matcher
         run: echo "::add-matcher::.github/matchers/tflint.json"
 
       - name: Run TFLint (with annotations)
         run: |
           cd ${{ matrix.module }}
           tflint --init
-          tflint --format=compact    
-
-      - name: Run TFLint
-        run: |
-          cd ${{ matrix.module }}
-          tflint --init
-          tflint
+          tflint --format=compact
 
       - name: Run tfsec
         uses: aquasecurity/tfsec-action@v1
