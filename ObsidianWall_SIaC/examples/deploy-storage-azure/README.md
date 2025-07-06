@@ -1,5 +1,6 @@
 
-## 📁 `examples/deploy-storage-azure/README.md`
+## 📁 `obsidianwall-core/ObsidianWall_SIaC/examples/deploy-storage-azure/README.md`
+
 
 ---
 

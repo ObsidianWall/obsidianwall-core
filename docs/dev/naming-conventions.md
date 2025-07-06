@@ -1,5 +1,6 @@
 
-# file: 📁 `developer-docs/naming-conventions.md`
+## file: 📁 `obsidianwall-core/docs/dev/naming-conventions.md`
+
 
 # Naming Conventions
 

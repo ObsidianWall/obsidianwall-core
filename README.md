@@ -1,4 +1,4 @@
-# file: 📁 `obsidianwall-core/README.md`
+## file: 📁 `obsidianwall-core/README.md`
 
 # ObsidianWall
 

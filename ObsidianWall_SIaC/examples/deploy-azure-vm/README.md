@@ -1,6 +1,7 @@
 
 
-## 📁 `examples/deploy-azure-vm/README.md`
+## 📁 `obsidianwall-core/ObsidianWall_SIaC/examples/deploy-azure-vm/README.md`
+
 
 ---
 

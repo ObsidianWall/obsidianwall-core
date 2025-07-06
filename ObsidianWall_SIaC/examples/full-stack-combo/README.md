@@ -1,5 +1,6 @@
 
-## 📁 `examples/full-stack-combo/README.md`
+## 📁 `obsidianwall-core/ObsidianWall_SIaC/examples/full-stack-combo/README.md`
+
 
 ---
 

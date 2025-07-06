@@ -1,5 +1,7 @@
 
-# file: 📁 `docs/user/deploying-modules.md`
+## file: 📁 `obsidianwall-core/docs/user/deploying-modules.md`
+
+
 
 # 📦 Deploying Modules
 

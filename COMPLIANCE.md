@@ -1,5 +1,5 @@
 
-# file: 📁 ` obsidianwall-core/COMPLIANCE.md`
+## file: 📁 ` obsidianwall-core/COMPLIANCE.md`
 
 
 # 🛡️ Compliance Overview

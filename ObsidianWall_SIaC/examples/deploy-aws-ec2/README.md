@@ -1,6 +1,7 @@
 
+## 📁 `obsidianwall-core/ObsidianWall_SIaC/examples/deploy-aws-ec2/README.md`
 
-## 📁 `examples/deploy-aws-ec2/README.md`
+
 
 ---
 # Example: Deploy Netbird-enabled EC2 Instance

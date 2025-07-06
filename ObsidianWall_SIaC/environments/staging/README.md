@@ -1,6 +1,6 @@
 
+## 📁 `obsidianwall-core/ObsidianWall_SIaC/environments/staging/README.md`
 
-## 📁 `environments/staging/README.md`
 
 
 # Staging Environment

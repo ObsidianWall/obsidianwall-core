@@ -1,4 +1,6 @@
-# file: 📁 `docs/dev/workflows.md`
+## file: 📁 `obsidianwall-core/docs/dev/workflows.md`
+
+
 
 # CI/CD & Automation Workflows Overview
 

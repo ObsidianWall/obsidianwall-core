@@ -1,5 +1,7 @@
 
-# file: 📁 `docs/sec/compliance.md`
+## file: 📁 `obsidianwall-core/docs/sec/compliance.md`
+
+
 
 # 🔍 Compliance Strategy & Enforcement  
 _Deep Dive: docs/sec/compliance.md_

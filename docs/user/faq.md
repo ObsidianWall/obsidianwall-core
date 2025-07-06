@@ -1,3 +1,5 @@
+## file: 📁 `obsidianwall-core/docs/user/faq.md`
+
 
 
 # ❓ Frequently Asked Questions (FAQ)

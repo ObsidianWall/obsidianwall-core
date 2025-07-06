@@ -1,5 +1,5 @@
 
-# file: 📁 `obsidianwall-core/SECURITY.md`
+## file: 📁 `obsidianwall-core/SECURITY.md`
 
 # Security Policy
 

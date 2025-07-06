@@ -1,4 +1,6 @@
-# file: 📁 `docs/sec/threat-model.md`
+## file: 📁 `obsidianwall-core/docs/sec/threat-model.md`
+
+
 
 # Threat Model for ObsidianWall
 

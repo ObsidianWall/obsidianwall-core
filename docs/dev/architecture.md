@@ -1,5 +1,7 @@
 
-# file:📁 ` developer-docs/architecture.md `
+## file:📁 `obsidianwall-core/docs/dev/architecture.md`
+
+
 
 # ObsidianWall Architecture (Work in Progress)
 
