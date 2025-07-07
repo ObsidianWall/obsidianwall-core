@@ -1,0 +1,54 @@
+
+# filepath: .github/workflows/scripts-ci.yml
+# This workflow validates Bash and Python scripts in the ObsidianWall_SIaC/scripts directory.
+
+
+name: Scripts CI
+
+on:
+  push:
+    paths:
+      - 'ObsidianWall_SIaC/scripts/**'
+  pull_request:
+    paths:
+      - 'ObsidianWall_SIaC/scripts/**'
+
+jobs:
+  bash-lint:
+    runs-on: ubuntu-latest
+    name: Validate Bash Scripts
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install shellcheck & shfmt
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+          sudo snap install shfmt
+
+      - name: Run shellcheck
+        run: find ObsidianWall_SIaC/scripts -name "*.sh" -exec shellcheck {} +
+
+      - name: Run shfmt
+        run: find ObsidianWall_SIaC/scripts -name "*.sh" -exec shfmt -d {} +
+
+  python-lint:
+    runs-on: ubuntu-latest
+    name: Lint Python Scripts
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Bandit & Ruff
+        run: |
+          pip install bandit ruff
+
+      - name: Run Bandit
+        run: bandit -r ObsidianWall_SIaC/scripts
+
+      - name: Run Ruff (Python linter)
+        run: ruff check ObsidianWall_SIaC/scripts

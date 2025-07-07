@@ -1,0 +1,31 @@
+
+# File: .github/workflows/validate-ci-health.yml
+# This workflow validates the CI coverage for the ObsidianWall_SIaC module.
+# Purpose: Run weekly + on PR to check for CI coverage gaps
+
+
+
+name: Validate CI Coverage
+
+on:
+  schedule:
+    - cron: '0 4 * * 1'  # every Monday at 4 AM UTC
+  pull_request:
+    paths:
+      - 'ObsidianWall_SIaC/modules/**'
+
+jobs:
+  check-ci-health:
+    name: Check CI Module Coverage
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: obsidianwall-core/ObsidianWall_SIaC/scripts
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run CI Health Validator
+        run: ./validate-ci-health.sh
