@@ -1,0 +1,23 @@
+
+# file: ObsidianWall_SIaC/modules/test-module/.github/workflows/ci-security.yml
+
+
+
+
+name: Module CI - test-module
+
+on:
+  push:
+    paths:
+      - '**/*.tf'
+      - '**/*.tfvars'
+  pull_request:
+    paths:
+      - '**/*.tf'
+      - '**/*.tfvars'
+
+jobs:
+  call-module-template:
+    uses: ./.github/workflows/module-ci-template.yml
+    with:
+      working-directory: ObsidianWall_SIaC/modules/test-module
