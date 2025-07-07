@@ -6,7 +6,10 @@
 # Note: This workflow is triggered on changes to Terraform files (.tf, .tfvars) in the repository.
 
 
-name: Static IaC Security Scan (azure-vm)
+
+
+
+name: Static IaC Security Scan Reusable Module CI (azure-vm)
 
 on:
   push:
@@ -19,39 +22,7 @@ on:
       - '**/*.tfvars'
 
 jobs:
-  security-scan:
-    name: Security + Linting
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory:  ObsidianWall_SIaC/modules/azure-vm  # adjust per module if needed
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3.1.0
-        with:
-          terraform_version: 1.6.6
-
-      - name: Terraform Init
-        run: terraform init
-
-      - name: Terraform Validate
-        run: terraform validate
-
-      - name: Run TFLint
-        uses: terraform-linters/setup-tflint@v4.1.0
-        with:
-          tflint_version: latest
-
-      - name: Run tfsec
-        uses: aquasecurity/tfsec-action@v1.0.3
-        with:
-          working_directory: ObsidianWall_SIaC/modules/azure-vm  # adjust per module if needed
-
-      - name: Run Checkov
-        uses: bridgecrewio/checkov-action@v12.2170.0
-        with:
-          directory: ObsidianWall_SIaC/modules/azure-vm  # adjust per module if needed
+  module-ci:
+    uses: ./.github/workflows/module-ci-template.yml
+    with:
+      working-directory: ObsidianWall_SIaC/modules/azure-vm  # adjust per module if needed
