@@ -1,6 +1,8 @@
 
 # File: .github/workflows/module-ci-template.yml
 # This workflow is a reusable module CI template for validating and securing Terraform modules.
+# It includes steps for Terraform initialization, formatting, validation, linting with TFLint, and security checks.
+# # Purpose: Local module build-time security validation (tfsec + Checkov + tfint).
 
 
 
@@ -15,11 +17,21 @@ on:
 
 jobs:
   module-ci:
-    name: Validate & Secure Module
+    name: Validate & Secure Module 
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ${{ inputs.working-directory }}
+
+    permissions:
+      contents: read
+      id-token: write
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      TFSEC_GITHUB_TOKEN: ${{ secrets.TFSEC_GITHUB_TOKEN }}
+      CHECKOV_GITHUB_TOKEN: ${{ secrets.CHECKOV_GITHUB_TOKEN }}
+
 
     steps:
       - name: Checkout code
@@ -31,7 +43,7 @@ jobs:
           terraform_version: 1.6.6
 
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -input=false
 
       - name: Terraform Format
         run: terraform fmt -check
@@ -52,9 +64,7 @@ jobs:
       - name: Run tfsec
         uses: aquasecurity/tfsec-action@v1.0.3
         with:
-          working_directory: ${{ inputs.working-directory }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          working_directory: ${{ inputs.working-directory }} 
 
       - name: Run Checkov
         uses: bridgecrewio/checkov-action@v12.2170.0
