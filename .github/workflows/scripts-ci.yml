@@ -1,5 +1,5 @@
 
-# filepath: .github/workflows/scripts-ci.yml
+# filepath: Obsidian-core/.github/workflows/scripts-ci.yml
 # This workflow validates Bash and Python scripts in the ObsidianWall_SIaC/scripts directory.
 
 

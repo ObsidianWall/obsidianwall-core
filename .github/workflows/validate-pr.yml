@@ -7,7 +7,6 @@
 
 
 
-
 name: Validate Pull Request Title and Description
 
 on:
