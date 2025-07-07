@@ -1,4 +1,10 @@
 
+#file: .github/workflows/dependabot.yml
+
+
+# This workflow is automatically managed by Dependabot to keep your GitHub Actions workflows up to date.
+
+
 version: 2
 updates:
   - package-ecosystem: "github-actions"

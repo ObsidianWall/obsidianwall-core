@@ -7,8 +7,6 @@
 
 
 
-# File: ObsidianWall_SIaC/modules/aws-ec2/.github/workflows/ci-security.yml
-
 
 
 name: Static IaC Security Scan Reusable Module CI (aws-ec2)
