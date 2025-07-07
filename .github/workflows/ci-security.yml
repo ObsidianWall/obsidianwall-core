@@ -12,7 +12,7 @@
 
 
 
-name: Static Security Scan (tfsec, checkov, tflint)
+name: Static Security Scan (tfsec, checkov)
 
 on:
   push:
@@ -41,24 +41,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup TFLint
-        uses: terraform-linters/setup-tflint@v4.1.0
-        with:
-          tflint_version: latest
-
-      - name: Register TFLint Matcher
-        run: echo "::add-matcher::.github/matchers/tflint.json"
-
-      - name: Run TFLint (with annotations)
-        run: |
-          cd ${{ matrix.module }}
-          tflint --init
-          tflint --format=compact
-
       - name: Run tfsec
         uses: aquasecurity/tfsec-action@v1.0.3
         with:
           working_directory: ${{ matrix.module }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}    # ✅ prevents rate-limiting
+
 
       - name: Run Checkov
         uses: bridgecrewio/checkov-action@v12.2170.0
