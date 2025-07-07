@@ -21,7 +21,7 @@ on:
 
 jobs:
   terraform-validate:
-    name: Terraform Format, Validate, and Plan
+    name: Terraform Format, Validate, Lint, and Plan
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -56,6 +56,19 @@ jobs:
 
       - name: Terraform Validate
         run: terraform validate
+
+      - name: Setup TFLint
+        uses: terraform-linters/setup-tflint@v4
+        with:
+          tflint_version: latest
+
+      - name: Register TFLint Matcher
+        run: echo "::add-matcher::.github/matchers/tflint.json"
+
+      - name: Run TFLint
+        run: |
+          tflint --init
+          tflint --format=compact  
 
       - name: Terraform Plan (Speculative)
         run: terraform plan -input=false
