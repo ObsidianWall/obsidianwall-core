@@ -22,10 +22,12 @@ permissions:
 on:
   push:
     paths:
-      - 'ObsidianWall_SIaC/environments/dev/**'
+      - 'ObsidianWall_SIaC/environments/dev/**.tf'
+      - 'ObsidianWall_SIaC/environments/dev/**.tfvars'
   pull_request:
     paths:
-      - 'ObsidianWall_SIaC/environments/dev/**'
+      - 'ObsidianWall_SIaC/environments/dev/**.tfvars'
+      - 'ObsidianWall_SIaC/environments/dev/**.tf'
 
 jobs:
   plan-core:

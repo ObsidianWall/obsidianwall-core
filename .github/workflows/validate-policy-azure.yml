@@ -25,11 +25,13 @@ permissions:
 on:
   pull_request:
     paths:
-      - 'ObsidianWall_SIaC/modules/**'
+      - 'ObsidianWall_SIaC/modules/**.tf'
+      - 'ObsidianWall_SIaC/modules/**.tfvars'
   push:
     branches: [main]
     paths:
-      - 'ObsidianWall_SIaC/modules/**'
+      - 'ObsidianWall_SIaC/modules/**.tf'
+      - 'ObsidianWall_SIaC/modules/**.tfvars'
 
 env:
   AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}

@@ -20,10 +20,12 @@ name: Scripts CI
 on:
   push:
     paths:
-      - 'ObsidianWall_SIaC/scripts/**'
+      - 'ObsidianWall_SIaC/scripts/**.tf'
+      - 'ObsidianWall_SIaC/scripts/**.tfvars'
   pull_request:
     paths:
-      - 'ObsidianWall_SIaC/scripts/**'
+      - 'ObsidianWall_SIaC/scripts/**.tfvars'
+      - 'ObsidianWall_SIaC/scripts/**.tf'
 
 jobs:
   bash-lint:

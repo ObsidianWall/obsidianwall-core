@@ -28,7 +28,8 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'ObsidianWall_SIaC/environments/dev/**'
+      - 'ObsidianWall_SIaC/environments/dev/**.tf'
+      - 'ObsidianWall_SIaC/environments/dev/**.tfvars'
 
 jobs:
   deploy-dev:

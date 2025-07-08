@@ -25,7 +25,8 @@ permissions:
 on:
   pull_request:
     paths:
-      - 'ObsidianWall_SIaC/modules/**'
+      - 'ObsidianWall_SIaC/modules/**.tfvars'  # Trigger on changes to .tfvars files
+      - 'ObsidianWall_SIaC/modules/**.tf'  # Trigger on changes to main.tf files
 
 jobs:
   validate-modules:

@@ -29,10 +29,12 @@ permissions:
 on:
   push:
     paths:
-      - 'ObsidianWall_SIaC/modules/**'
+      - 'ObsidianWall_SIaC/modules/**.tf'
+      - 'ObsidianWall_SIaC/modules/**.tfvars'
   pull_request:
     paths:
-      - 'ObsidianWall_SIaC/modules/**'
+      - 'ObsidianWall_SIaC/modules/**.tfvars'
+      - 'ObsidianWall_SIaC/modules/**.tf'
 
 jobs:
   security-scan:

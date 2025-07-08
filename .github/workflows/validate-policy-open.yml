@@ -24,6 +24,7 @@ on:
   push:
     paths:
       - 'policies/open-source/**'
+      
   pull_request:
     paths:
       - 'policies/open-source/**'

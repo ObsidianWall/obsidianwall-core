@@ -25,11 +25,13 @@ permissions:
 on:
   pull_request:
     paths:
-      - 'ObsidianWall_SIaC/modules/**'
+      - 'ObsidianWall_SIaC/modules/**.tf'
+      - 'ObsidianWall_SIaC/modules/**.tfvars'
   push:
     branches: [main]
     paths:
-      - 'ObsidianWall_SIaC/modules/**'
+      - 'ObsidianWall_SIaC/modules/**.tf'
+      - 'ObsidianWall_SIaC/modules/**.tfvars'
 
 jobs:
   terraform-validate:

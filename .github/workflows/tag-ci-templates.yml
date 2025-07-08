@@ -1,7 +1,7 @@
 
 ### ✅ 2. `.github/workflows/tag-ci-templates.yml`
 
-This GitHub Action auto-tags reusable workflow templates.
+# This GitHub Action auto-tags reusable workflow templates.
 
 # File: .github/workflows/tag-ci-templates.yml
 

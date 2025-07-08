@@ -22,6 +22,31 @@ This document outlines how continuous integration workflows are structured in th
 
 ---
 
+## CI Workflow Layers
+
+| Layer         | Purpose                              | Location                                      |
+|--------------|--------------------------------------|-----------------------------------------------|
+| Global        | DRY workflows + security + linting   | `.github/workflows/`                          |
+| Module        | Reuses global workflows via `uses:`  | `modules/*/.github/workflows/ci-security.yml` |
+| Environment   | Validates runtime configuration      | `environments/**/env-runtime.yml`             |
+| Examples      | Uses templates to test deployments   | `examples/**/ci-security.yml` (optional)      |
+| Scripts       | Lint Bash & Python tools             | `.github/workflows/scripts-ci.yml`            |
+| Policy Scan   | Validates policies (AWS/Azure/OPA)   | `validate-policy-*.yml` in `.github/workflows/` |
+
+---
+
+## Versioning Strategy for Actions
+
+To ensure stability, we pin all reusable GitHub Actions by version tag (e.g., `@v12.2170.0`).  
+To improve security, we will transition to pinning by full commit SHA for 3rd-party actions.
+
+### ✅ Example
+
+```yaml
+- uses: bridgecrewio/checkov-action@v12.2170.0 # TODO: Pin with SHA
+```
+---
+
 ## 🤖 Automation Scripts
 
 Automation logic lives in `ObsidianWall_SIaC/scripts/`  

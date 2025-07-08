@@ -28,11 +28,13 @@ permissions:
 on:
   pull_request:
     paths:
-      - 'ObsidianWall_SIaC/examples/**'
+      - 'ObsidianWall_SIaC/examples/**.tf'
+      - 'ObsidianWall_SIaC/examples/**.tfvars'
   push:
     branches: [main]
     paths:
-      - 'ObsidianWall_SIaC/examples/**'
+      - 'ObsidianWall_SIaC/examples/**.tfvars'
+      - 'ObsidianWall_SIaC/examples/**.tf'
 
 jobs:
   example-plan:
