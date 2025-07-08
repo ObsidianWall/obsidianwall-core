@@ -10,6 +10,18 @@
 
 name: Validate Azure Policies
 
+# 🛡️ Permissions: Define what the job can access
+permissions:
+  contents: read               # required for actions/checkout
+  pull-requests: write         # only if writing comments to PRs
+  # id-token: write            # uncomment for OIDC auth (e.g., cloud deployments)
+  # packages: read             # needed if pulling from GHCR or private packages
+  # issues: write              # for workflows that comment on issues
+  # actions: read              # for composite actions or reuse
+  # security-events: write     # for uploading SARIF to GitHub Security tab
+  # deployments: write         # if performing GitHub deployments
+  # statuses: write            # if setting commit status (e.g., from tests or scans)
+
 on:
   pull_request:
     paths:
@@ -29,19 +41,6 @@ jobs:
   azure-policy-validation:
     name: Azure Policy Compliance Check
     runs-on: ubuntu-latest
-
-    # 🛡️ Permissions: Define what the job can access
-    permissions:
-      contents: read               # required for actions/checkout
-      pull-requests: write         # only if writing comments to PRs
-      
-      # id-token: write            # uncomment for OIDC auth (e.g., cloud deployments)
-      # packages: read             # needed if pulling from GHCR or private packages
-      # issues: write              # for workflows that comment on issues
-      # actions: read              # for composite actions or reuse
-      # security-events: write     # for uploading SARIF to GitHub Security tab
-      # deployments: write         # if performing GitHub deployments
-      # statuses: write            # if setting commit status (e.g., from tests or scans)
 
     steps:
       - name: Checkout repository
