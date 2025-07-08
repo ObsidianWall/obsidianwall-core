@@ -21,6 +21,11 @@ jobs:
     defaults:
       run:
         working-directory: ${{ matrix.environment }}
+    
+    permissions:
+      contents: read
+      id-token: write
+    
     strategy:
       matrix:
         environment:

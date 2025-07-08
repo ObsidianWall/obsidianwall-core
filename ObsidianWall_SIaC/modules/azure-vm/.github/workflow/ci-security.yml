@@ -23,6 +23,6 @@ on:
 
 jobs:
   module-ci:
-    uses: ./.github/workflows/module-ci-template.yml
+    uses: obsidianwall-core/.github/workflows/module-ci-template.yml@v1
     with:
       working-directory: ObsidianWall_SIaC/modules/azure-vm  # adjust per module if needed
