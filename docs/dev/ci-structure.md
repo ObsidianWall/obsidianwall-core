@@ -1,7 +1,7 @@
 
 #### filepath: `obsidianwall-core/docs/dev/ci-structure.md`
 
-
+---
 
 # CI/CD Structure Overview
 
@@ -25,7 +25,7 @@ This document outlines how continuous integration workflows are structured in th
 ## 🤖 Automation Scripts
 
 Automation logic lives in `ObsidianWall_SIaC/scripts/`  
-See `scripts.md` for usage.
+See [`docs/dev/scripts.md`](scripts.md) for full usage instructions.
 
 ---
 
@@ -35,10 +35,23 @@ Use `modules/test-module/` to verify that CI workflows behave correctly before a
 
 ---
 
+## 🔁 DRY Workflow Logic
+
+Each module’s CI file should call the reusable template like so:
+
+```yaml
+jobs:
+  module-ci:
+    uses: ./.github/workflows/module-ci-template.yml
+    with:
+      working-directory: ObsidianWall_SIaC/modules/your-module-name
+```
+---
+
 ## 🧱 Adding New Modules
 
-1. Create a new folder in `modules/`
-2. Run `auto-patch-ci.py` to:
-   - Add to matrix CI files
-   - Create `ci-security.yml`
-3. Confirm via `validate-ci-health.sh`
+1. Create a new folder under ObsidianWall_SIaC/modules/
+2. Run `scripts/auto-patch-ci.py` to:
+   - Adds the new module to ci-security.yml and validate-terraform.yml
+   - Generates a local .github/workflows/ci-security.yml using DRY logic
+3. Confirm coverage using scripts/validate-ci-health.sh

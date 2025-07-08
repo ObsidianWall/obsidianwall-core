@@ -1,0 +1,35 @@
+
+#file: .github/workflows/validate-policy-open.yml
+
+# This workflow validates Open policies using OPA and Conftest.
+
+
+
+name: Validate Open Policies
+
+on:
+  push:
+    paths:
+      - 'policies/open-source/**'
+  pull_request:
+    paths:
+      - 'policies/open-source/**'
+
+jobs:
+  opa-validate:
+    name: Run OPA/Conftest Policies
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Conftest
+        run: |
+          wget https://github.com/open-policy-agent/conftest/releases/download/v0.45.0/conftest_0.45.0_Linux_x86_64.tar.gz
+          tar -xzf conftest_0.45.0_Linux_x86_64.tar.gz
+          sudo mv conftest /usr/local/bin/
+
+      - name: Run Policy Checks
+        run: |
+          conftest test ObsidianWall_SIaC/modules/aws-ec2/main.tf

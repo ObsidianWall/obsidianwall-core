@@ -1,7 +1,5 @@
 
-# file: ObsidianWall_SIaC/modules/test-module/.github/workflows/ci-security.yml
-
-
+# File: ObsidianWall_SIaC/modules/test-module/.github/workflows/ci-security.yml
 
 
 name: Module CI - test-module

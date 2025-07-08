@@ -1,0 +1,30 @@
+
+# File: obsidianwall-core/ObsidianWall_SIaC/environments/dev/.github/workflows/ci-security.yml
+
+# Purpose: Local module build-time security validation (tfsec + Checkov + TFLint)
+
+# Note: This workflow is triggered on changes to Terraform files (.tf, .tfvars) in the module directory.
+
+
+
+
+
+name: Static IaC Security Scan Reusable Module CI (dev)
+
+on:
+  push:
+    paths:
+      - '**/*.tf'
+      - '**/*.tfvars'
+  pull_request:
+    paths:
+      - '**/*.tf'
+      - '**/*.tfvars'
+
+jobs:
+  module-ci:
+    uses: ./.github/workflows/module-ci-template.yml
+    with:
+      working-directory: ObsidianWall_SIaC/modules/dev   # adjust per module if needed
+
+
