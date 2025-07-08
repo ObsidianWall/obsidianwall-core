@@ -1,0 +1,44 @@
+
+# File: obsidian-core/.github/workflows/env-runtime-template.yml
+
+# This workflow validates the Terraform configurations in different environments
+
+
+
+name: Environment Runtime Validation
+
+on:
+  push:
+    paths:
+      - 'environments/**'
+  pull_request:
+    paths:
+      - 'environments/**'
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ matrix.environment }}
+    strategy:
+      matrix:
+        environment:
+          - environments/dev
+          - environments/prod
+          - environments/staging
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3.1.0
+        with:
+          terraform_version: 1.6.6
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Plan
+        run: terraform plan

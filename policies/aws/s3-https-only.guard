@@ -1,0 +1,15 @@
+
+// file: policies/aws/s3-https-only.guard
+
+// This policy ensures that all S3 bucket policies enforce HTTPS only access.
+ // It checks that the condition for secure transport (HTTPS) is set to true.
+
+# File: policies/aws/s3-https-only.guard
+
+
+
+
+rule allow_only_https {
+  resource.type == "AWS::S3::BucketPolicy"
+  resource.policyDocument.Statement[*].Condition.Bool."aws:SecureTransport" == "true"
+}

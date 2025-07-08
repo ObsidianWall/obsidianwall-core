@@ -1,0 +1,17 @@
+
+
+
+{
+  "properties": {
+    "displayName": "Require Environment Tag",
+    "policyRule": {
+      "if": {
+        "field": "tags['Environment']",
+        "equals": null
+      },
+      "then": {
+        "effect": "deny"
+      }
+    }
+  }
+}

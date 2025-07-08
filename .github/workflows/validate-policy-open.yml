@@ -1,7 +1,8 @@
 
-#file: .github/workflows/validate-policy-open.yml
+#file: obsidianwall-core/.github/workflows/validate-policy-open.yml
 
 # This workflow validates Open policies using OPA and Conftest.
+
 
 
 
