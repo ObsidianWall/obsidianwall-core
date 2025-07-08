@@ -1,4 +1,10 @@
 
+# filepath: ObsidianWall_SIaC/versions.tf
+
+
+# This file defines the required Terraform version and provider versions for the ObsidianWall project.
+
+
 terraform {
   required_version = ">= 1.5.0"
   required_providers {

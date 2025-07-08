@@ -1,7 +1,7 @@
+# File: ObsidianWall_SIaC/scripts/validate-ci-health.sh
 
 #!/bin/bash
 
-# File: ObsidianWall_SIaC/scripts/validate-ci-health.sh
 # Purpose: Checks if all modules have proper CI coverage (security and validate)
 # ✅ Description: Verifies if each terraform module is registered in validate and CI workflows.
 

@@ -1,4 +1,10 @@
 
+# filepath: ObsidianWall_SIaC/provider.tf
+
+# This file contains the provider configurations for Azure and AWS.
+
+
+
 provider "azurerm" {
   features {}
 }
