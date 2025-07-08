@@ -1,0 +1,27 @@
+
+# File: .github/workflows/lint-permissions.yml
+# 👀 CI Security Guardrail: Detect workflows with overly permissive permissions
+
+name: Lint Workflow Permissions
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/**.yml'
+
+jobs:
+  check-permissions:
+    runs-on: ubuntu-latest
+    name: Detect Dangerous Workflow Permissions
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Scan for permission escalation
+        run: |
+          echo "Scanning GitHub workflows for elevated permissions..."
+          grep -r 'permissions:' .github/workflows | grep -E 'write-all|id-token: write|deployments: write|security-events: write' && \
+            echo '::error ::⚠️ Detected overly permissive permissions! Please review.' && exit 1 || \
+            echo '✅ No overly permissive workflows detected.'
+
