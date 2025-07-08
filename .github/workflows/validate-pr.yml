@@ -34,6 +34,6 @@ jobs:
 
     steps:
       - name: Ensure PR title is meaningful
-        uses: amannn/action-semantic-pull-request@v5
+        uses: amannn/action-semantic-pull-request@c65cd883420fd2eb864698a825fc4162dd94482c #(v5), V44, using specific commit SHA for stability
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
