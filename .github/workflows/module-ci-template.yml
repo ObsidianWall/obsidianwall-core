@@ -1,5 +1,5 @@
 
-# File: .github/workflows/module-ci-template.yml
+# File: obsidianwall-core/.github/workflows/module-ci-template.yml
 # This workflow is a reusable module CI template for validating and securing Terraform modules.
 # It includes steps for Terraform initialization, formatting, validation, linting with TFLint, and security checks.
 # # Purpose: Local module build-time security validation (tfsec + Checkov + tfint).
