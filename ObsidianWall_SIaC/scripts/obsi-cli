@@ -2,3 +2,37 @@
 # file: obsidianwall-core/ObsidianWall_SIaC/scripts/obsi-cli
 
 # This script is used to run the ObsidianWall CLI tool.
+
+
+
+chmod +x ObsidianWall_SIaC/scripts/obsi-cli
+
+#!/bin/bash
+
+set -e
+
+CMD=$1
+TYPE=$2
+NAME=$3
+
+TEMPLATE_PATH="$(dirname "$0")/../templates"
+
+if [[ "$CMD" == "env" && "$TYPE" == "new" && "$NAME" != "" ]]; then
+  echo "📦 Scaffolding environment: $NAME"
+  cp -r "$TEMPLATE_PATH/env" "ObsidianWall_SIaC/environments/$NAME"
+  mv "ObsidianWall_SIaC/environments/$NAME/RENAME-ME.md" "ObsidianWall_SIaC/environments/$NAME/README.md"
+  echo "✅ Environment '$NAME' created."
+elif [[ "$CMD" == "module" && "$TYPE" == "new" && "$NAME" != "" ]]; then
+  echo "🧱 Scaffolding module: $NAME"
+  cp -r "$TEMPLATE_PATH/module" "ObsidianWall_SIaC/modules/$NAME"
+  mv "ObsidianWall_SIaC/modules/$NAME/RENAME-ME.md" "ObsidianWall_SIaC/modules/$NAME/README.md"
+  echo "✅ Module '$NAME' created."
+else
+  echo "❌ Invalid command"
+  echo "Usage:"
+  echo "  ./obsi-cli env new <name>"
+  echo "  ./obsi-cli module new <name>"
+  exit 1
+fi
+echo "🚀 ObsidianWall CLI tool executed successfully."
+
