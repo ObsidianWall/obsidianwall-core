@@ -1,6 +1,7 @@
 
 # filepath: ObsidianWall_SIaC/modules/azure-keyvault/main.tf
-# main.tf
+# This module provisions a Key Vault in Azure.
+# This module creates an Azure Key Vault with the specified parameters.
 
 
 resource "azurerm_key_vault" "example" {
