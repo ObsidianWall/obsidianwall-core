@@ -1,0 +1,23 @@
+
+# filepath: obsidianwall-core/ObsidianWall_SIaC/modules/azure-keyvault/ci-security.yml
+
+# ci-security.yml (calls DRY CI template)
+
+# .github/workflows/ci-security.yml
+
+
+name: Module CI
+
+on:
+  push:
+    paths:
+      - '**/*.tf'
+  pull_request:
+    paths:
+      - '**/*.tf'
+
+jobs:
+  module-ci:
+    uses: obsidianwall-core/.github/workflows/module-ci-template.yml@v1
+    with:
+      working-directory: ObsidianWall_SIaC/modules/azure-keyvault
