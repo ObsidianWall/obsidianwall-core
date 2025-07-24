@@ -25,6 +25,6 @@ jobs:
   module-ci:
     uses: ./.github/workflows/module-ci-template.yml
     with:
-      working-directory: ObsidianWall_SIaC/modules/deploy-aws-ec2   # adjust per module if needed
+      working-directory: ObsidianWall_SIaC/modules/aws_modules/deploy-aws-ec2   # adjust per module if needed
 
 
