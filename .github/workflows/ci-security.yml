@@ -45,13 +45,13 @@ jobs:
     strategy:
       matrix:
         module:
-          - ObsidianWall_SIaC/modules/aws-ec2
-          - ObsidianWall_SIaC/modules/azure-vm
-          - ObsidianWall_SIaC/modules/azure-storage
-          - ObsidianWall_SIaC/modules/aws-s3
-          - ObsidianWall_SIaC/modules/ndr-azure-vm
-          - ObsidianWall_SIaC/modules/ndr-aws-ec2
-          - ObsidianWall_SIaC/modules/netbird-vpn-server
+          - ObsidianWall_SIaC/modules/aws_modules/aws-ec2
+          - ObsidianWall_SIaC/modules/azure_modules/azure-vm
+          - ObsidianWall_SIaC/modules/azure_modules/azure-storage
+          - ObsidianWall_SIaC/modules/aws_modules/aws-s3
+          - ObsidianWall_SIaC/modules/azure_modules/ndr-azure-vm
+          - ObsidianWall_SIaC/modules/aws_modules/ndr-aws-ec2
+          - ObsidianWall_SIaC/modules/aws_modules/netbird-vpn-server
 
     steps:
       - name: Checkout Code
