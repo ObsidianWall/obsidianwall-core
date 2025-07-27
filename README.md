@@ -1,4 +1,5 @@
 #### file: 📁 `obsidianwall-core/README.md`
+---
 
 # ObsidianWall
 
