@@ -75,7 +75,7 @@ jobs:
         run: terraform validate
 
       - name: Setup TFLint
-        uses: terraform-linters/setup-tflint@4 #using a specific commit for stability
+        uses: terraform-linters/setup-tflint@c65cd883420fd2eb864698a825fc4162dd94482c # V4 using a specific commit for stability
         with:
           tflint_version: latest
 
