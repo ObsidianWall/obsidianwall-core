@@ -1,5 +1,6 @@
 
 #### file: 📁 `obsidianwall-core/SECURITY.md`
+---
 
 # Security Policy
 
