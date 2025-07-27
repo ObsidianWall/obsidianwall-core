@@ -1,6 +1,6 @@
 
 #### file: 📁 ` obsidianwall-core/COMPLIANCE.md`
-
+---
 
 # 🛡️ Compliance Overview
 
