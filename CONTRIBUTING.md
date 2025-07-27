@@ -1,4 +1,5 @@
 #### file: 📁 ` obsidianwall-core/CONTRIBUTING.md`
+---
 
 # Contributing to ObsidianWall
 
