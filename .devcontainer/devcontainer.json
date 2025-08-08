@@ -1,38 +1,39 @@
 
-
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
-  "name": "ObsidianWall Dev",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "name": "ObsidianWall Core IaC Module Development",
+  "build": {
+    // You can use a specific image, but we'll build from a Dockerfile to install Python dependencies
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
 
   "features": {
-    "ghcr.io/devcontainers/features/terraform:1": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {}
+    // Install the Docker-in-Docker feature to enable running Docker commands inside the container
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
 
   "customizations": {
     "vscode": {
+      "settings": {},
       "extensions": [
         "hashicorp.terraform",
-        "ms-vscode.live-share" // Optional: Good for collaboration
-      ],
-      "settings": {
-        // Optional: Pre-configure VS Code settings for Terraform
-        "terraform.languageServer.enabled": true,
-        "terraform.languageServer.args": [
-          "-log-level=debug" // Useful for debugging language server issues
-        ]
-      }
+        "redhat.vscode-yaml",
+        "ms-python.python",
+        "ms-azuretools.vscode-docker"
+      ]
     }
   },
 
-  "postCreateCommand": "bash .devcontainer/setup-workspace.sh",
+  // Post-create command to install all the tools and dependencies
+  "postCreateCommand": "python3 .devcontainer/setup-dev-container.py",
 
-  // This will be the root directory that VS Code opens initially.
-  // It's still the repo root, but our script will manage what's *inside* it.
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}" 
+  // Forward the necessary ports if you plan on running any local services
+  "forwardPorts": [],
+
+  "remoteUser": "vscode"
 }
-  
-
 
 
 
