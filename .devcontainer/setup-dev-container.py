@@ -1,4 +1,5 @@
 # file: obsidianwall-core/.devcontainer/setup-dev-container.py
+#  will install the tools a user/devlopers needs to build IaC modules
 
 
 
