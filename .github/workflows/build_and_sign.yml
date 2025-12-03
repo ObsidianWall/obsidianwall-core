@@ -1,0 +1,28 @@
+name: Build Devcontainer
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        product: [iac]
+        environment: [dev, test, staging, prod]
+
+    steps:
+      - uses: actions/checkout@...
+      
+      - name: Build Golden Container
+        run: |
+          docker build \
+            --build-arg PRODUCT=${{ matrix.product }} \
+            --build-arg ENVIRONMENT=${{ matrix.environment }} \
+            -t ghcr.io/obsidianwall/${{ matrix.product }}-${{ matrix.environment }}:latest \
+            -f cicd-pipeline/.devcontainer/Dockerfile .
+      
+      - name: Push
+        run: |
+          docker push ghcr.io/obsidianwall/${{ matrix.product }}-${{ matrix.environment }}:latest
