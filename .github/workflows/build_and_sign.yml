@@ -13,7 +13,7 @@ jobs:
         environment: [dev, test, staging, prod]
 
     steps:
-      - uses: actions/checkout@...
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955    # v4.3.0 pinned
       
       - name: Build Golden Container
         run: |
